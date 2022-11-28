@@ -22,7 +22,7 @@ export default function Header() {
                             onMouseEnter={() => setHoveredItem(page.title)}
                             onMouseLeave={() => setHoveredItem('')}
                             key={page.title}
-                            className="relative hover:text-white hover:cursor-pointer overflow-hidden px-[17px] py-[9px]  font-medium "
+                            className=" relative  hover:cursor-pointer  overflow-hidden hover:text-white text-grey  px-[17px] py-[9px]  font-medium   "
                         >
                             <motion.div
                                 initial={{
@@ -33,20 +33,18 @@ export default function Header() {
                                         ? {
                                               x: '0%',
                                           }
-                                        : {
-                                              x: '-105%',
-                                          }
+                                        : { x: '-105%' }
                                 }
                                 transition={{
-                                    duration: 0.3,
-                                    delay: 0.1,
+                                    duration: 0.4,
+                                    delay: 0.2,
+                                    ease: 'easeIn',
                                 }}
-                                className="absolute top-0 left-0  w-full h-full bg-black"
-                                style={{
-                                    zIndex: -10,
-                                }}
+                                className="bg-grey h-full w-full absolute right-0 top-0 -z-20 "
                             ></motion.div>
-                            <p className="  z-20 ">{page.title}</p>
+                            <p className="  z-[10] w-full h-full   mx-auto h-full bg-transparent  ">
+                                {page.title}
+                            </p>
                         </div>
                     )
                 })}
