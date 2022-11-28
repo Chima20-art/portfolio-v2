@@ -9,10 +9,13 @@ export default function Home() {
     return (
         <div className="md:max-w-[92%] mx-auto text-grey">
             <Header />
-            <div className="w-screen h-screen flex h-[80%] ">
-                <div className="w-[391px] h-full  mr-16">
-                    <img src="/portrait.jpg" alt="mainImg" />
-                </div>
+            <div className="w-screen h-screen flex h-[81vh]  ">
+                <img
+                    src="/portrait.jpg"
+                    alt="mainImg"
+                    className="w-[420px] h-full mr-10"
+                />
+
                 <div className="flex flex-col justify-center ">
                     <p className="uppercase text-[42px] font-[700] leading-[66px] py-4">
                         Chaimae michich
