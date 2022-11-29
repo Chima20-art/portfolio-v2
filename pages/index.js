@@ -11,11 +11,11 @@ export default function Home() {
         <div className="md:max-w-[92%] mx-auto text-grey h-[100vh]">
             <Header />
             <div className="w-screen  flex  ">
-                <div className=" h-[81vh] w-[420px] bg-[#F3EFF0] mr-10 flex justify-center ">
+                <div className=" h-[81vh] w-[420px]  bg-[#F3EFF0] mr-10 flex justify-center ">
                     <img
                         src="/portrait.jpeg"
                         alt="mainImg"
-                        className=" h-[90%] m-auto "
+                        className=" h-[90%] m-auto drop-shadow-2xl "
                     />
                 </div>
 

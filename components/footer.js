@@ -7,11 +7,10 @@ export default function Footer() {
         <div className="mt-4  flex justify-between  ">
             <p className="text-grey font-[400] text-[14px]">Copyright @2022</p>
             <div className="flex justify-center align-center text-black  ">
-                <FaFacebookF className="w-[16px] h-[14px] my-auto mr-2" />
-                <RiInstagramFill className="w-[16px] h-[16px] my-auto mr-2" />
-                <FaLinkedin className="w-[16px] h-[16px] my-auto mr-2" />
-
-                <VscGithubInverted className="w-[16px] h-[14px] my-auto" />
+                <FaFacebookF className="w-[16px] h-[14px] my-auto mr-2 cursor-pointer" />
+                <RiInstagramFill className="w-[16px] h-[16px] my-auto mr-2 cursor-pointer " />
+                <FaLinkedin className="w-[16px] h-[16px] my-auto mr-2 cursor-pointer" />
+                <VscGithubInverted className="w-[16px] h-[14px] my-auto cursor-pointer" />
             </div>
         </div>
     )
