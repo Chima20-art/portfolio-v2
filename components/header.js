@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
+import { VscMenu } from 'react-icons/vsc'
 
 export default function Header() {
     const pages = [
@@ -15,8 +16,10 @@ export default function Header() {
 
     return (
         <div className="h-14 md:h-14  flex items-center justify-between font-medium ">
-            <div className="  uppercase font-bold text-[18px] ">Michich</div>
-            <div className=" flex  text-grey text-sm ">
+            <div className="  uppercase font-bold text-[18px] text-black ">
+                Michich
+            </div>
+            <div className=" lg:flex  text-grey text-sm hidden ">
                 {pages?.map((page) => {
                     return (
                         <Link href={page.url}>
