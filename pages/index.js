@@ -3,13 +3,14 @@ import Image from 'next/image'
 import Header from '../components/header'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
+import Footer from '../components/footer'
 
 export default function Home() {
     const [showButton, setShowButton] = useState(false)
     return (
-        <div className="md:max-w-[92%] mx-auto text-grey">
+        <div className="md:max-w-[92%] mx-auto text-grey h-[100vh]">
             <Header />
-            <div className="w-screen h-screen flex  ">
+            <div className="w-screen  flex  ">
                 <div className=" h-[81vh] w-[420px] bg-[#F3EFF0] mr-10 flex justify-center ">
                     <img
                         src="/portrait.jpeg"
@@ -35,6 +36,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
