@@ -11,11 +11,11 @@ export default function Home() {
         <div className="md:max-w-[92%] mx-auto text-grey h-[100vh]">
             <Header />
             <div className="w-screen  flex  ">
-                <div className=" h-[81vh] w-[420px]  bg-[#F3EFF0] mr-10 flex justify-center ">
+                <div className=" h-[81vh] w-[420px]  bg-[F3EFF0] mr-10 flex justify-center ">
                     <img
                         src="/portrait.jpeg"
                         alt="mainImg"
-                        className=" h-[90%] m-auto drop-shadow-2xl "
+                        className=" h-[90%] m-auto rounded drop-shadow-2xl "
                     />
                 </div>
 
@@ -24,14 +24,16 @@ export default function Home() {
                         Chaimae michich
                     </p>
                     <div className="bg-grey w-[17%] h-1" />
-                    <div className="capitalize text-[23px]  text-[#7D788A]  my-6 ">
+                    <div className="cd-headline rotate-1  capitalize text-[23px]  text-[#7D788A]  my-6  inline-block">
                         {' '}
                         creative{' '}
-                        <span className=" capitalize  font-[600] text-grey">
-                            developer
+                        <span className="cd-words-wrapper  capitalize  font-[600] text-grey">
+                            <b className="is-visible">developer</b>
+                            <b>developer</b>
+                            <b>developer</b>
                         </span>
                     </div>
-                    <div className="py-[14px]  px-[26px] bg-grey  text-white w-fit cursor-pointer font-[500] text-[16px] border-grey border-[2px] hover:bg-white hover:text-grey">
+                    <div className="py-[14px]  px-[26px] bg-grey  text-white w-fit cursor-pointer font-[500] text-[16px] border-grey border-[2px] hover:bg-white hover:text-grey rounded">
                         Learn more
                     </div>
                 </div>
