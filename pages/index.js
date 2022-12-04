@@ -9,7 +9,7 @@ export default function Home() {
     const [showButton, setShowButton] = useState(false)
     const [headlines, setHeadlines] = useState([
         {
-            title: 'Developper',
+            title: 'Developer',
         },
         {
             title: 'Freelancer',
