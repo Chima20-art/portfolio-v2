@@ -22,12 +22,11 @@ export default function Header() {
             <div className=" lg:flex  text-grey text-sm hidden ">
                 {pages?.map((page) => {
                     return (
-                        <Link href={page.url}>
+                        <Link href={page.url} key={page.title}>
                             {' '}
                             <div
                                 onMouseEnter={() => setHoveredItem(page.title)}
                                 onMouseLeave={() => setHoveredItem('')}
-                                key={page.title}
                                 className=" relative  hover:cursor-pointer  overflow-hidden hover:text-white text-grey  px-[17px] py-[9px]  font-medium   "
                             >
                                 <motion.div
