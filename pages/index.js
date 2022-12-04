@@ -2,11 +2,37 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/header'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Footer from '../components/footer'
 
 export default function Home() {
     const [showButton, setShowButton] = useState(false)
+    const [headlines, setHeadlines] = useState([
+        {
+            title: 'Developper',
+        },
+        {
+            title: 'Freelancer',
+        },
+        {
+            title: 'Designer',
+        },
+    ])
+    const [selectedHeadline, setSelectedHeadline] = useState(0)
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (selectedHeadline < headlines.length - 1) {
+                setSelectedHeadline(selectedHeadline + 1)
+            } else {
+                setSelectedHeadline(0)
+            }
+        }, 2500)
+        return () => {
+            clearInterval(interval)
+        }
+    }, [selectedHeadline])
+
     return (
         <div className="md:max-w-[92%] mx-auto text-grey h-[100vh]">
             <Header />
@@ -28,9 +54,19 @@ export default function Home() {
                         {' '}
                         creative{' '}
                         <span className="cd-words-wrapper  capitalize  font-[600] text-grey">
-                            <b className="is-visible">developer</b>
-                            <b>developer</b>
-                            <b>developer</b>
+                            {headlines.map((item, index) => {
+                                return (
+                                    <b
+                                        className={`${
+                                            index == selectedHeadline
+                                                ? 'is-visible'
+                                                : ''
+                                        } `}
+                                    >
+                                        {item.title}
+                                    </b>
+                                )
+                            })}
                         </span>
                     </div>
                     <div className="py-[14px]  px-[26px] bg-grey  text-white w-fit cursor-pointer font-[500] text-[16px] border-grey border-[2px] hover:bg-white hover:text-grey rounded">
