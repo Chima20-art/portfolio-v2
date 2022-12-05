@@ -39,7 +39,7 @@ export default function About() {
                             </p>
                         </div>
                         <div className=" w-[45%] mx-auto flex text-lightGrey  text-[13px]  h-full   ">
-                            <p className="font-bold  flex flex-col  text-[13px]   py-4  h-full justify-between ">
+                            <p className="font-bold  flex flex-col  text-[13px]   py-4  h-full gap-4">
                                 <span>Name:</span>
                                 <span>Address:</span>
                                 <span>Study:</span>
@@ -47,11 +47,12 @@ export default function About() {
                                 <span>Mail:</span>
                                 <span>Phone:</span>
                             </p>
-                            <p className="  flex flex-col  ml-6 h-full text-[13px]    py-4  justify-between">
-                                <span>Chaimae Michich</span>
+                            <p className="  flex flex-col  ml-6 h-full text-[13px]    py-4  gap-4">
+                                <span> Chaimae Michich</span>
                                 <span>Ave Street, New York, USA</span>
                                 <span> Univercity of Oxford</span>
                                 <span>Master of Science</span>
+                                <span>michichchaimae@gmail.com</span>
                                 <span>+77 022 444 05 05</span>
                             </p>
                         </div>
