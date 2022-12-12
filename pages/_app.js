@@ -5,17 +5,19 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
     return (
-        <div className="md:max-w-[92%] mx-auto text-grey h-[100vh]">
+        <div className="w-[92%] mx-auto flex flex-col  text-grey h-screen">
             <Header />
-            <div className="w-full  flex ">
-                <div className=" h-[81vh] min-w-[420px]  bg-[F3EFF0] mr-10 flex justify-center ">
+            <div className=" flex  ">
+                <div className=" h-[81vh] min-w-[420px]  mr-10 flex justify-center ">
                     <img
                         src="/portrait.jpeg"
                         alt="mainImg"
                         className=" h-[90%] m-auto rounded drop-shadow-2xl "
                     />
                 </div>
-                <Component {...pageProps} />
+                <div className="flex-1 ">
+                    <Component {...pageProps} />
+                </div>
             </div>
             <Footer />
         </div>

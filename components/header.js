@@ -15,7 +15,7 @@ export default function Header() {
     const [hoverdItem, setHoveredItem] = useState('')
 
     return (
-        <div className="h-14 md:h-14  flex items-center justify-between font-medium ">
+        <div className="h-14   flex items-center justify-between font-medium ">
             <div className="  uppercase font-bold text-[18px] text-black ">
                 Michich
             </div>

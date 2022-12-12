@@ -34,8 +34,8 @@ export default function Home() {
     }, [selectedHeadline])
 
     return (
-        <div className="md:max-w-[92%] items-center  text-grey flex ">
-            <div className="w-screen  flex align-center my-auto ">
+        <div className="w-full h-full items-center  text-grey flex ">
+            <div className="w-full  flex align-center my-auto ">
                 <div className="flex flex-col justify-center ">
                     <p className="uppercase text-[42px] font-[700] leading-[66px] py-4">
                         Chaimae michich
