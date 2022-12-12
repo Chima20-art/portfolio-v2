@@ -34,17 +34,8 @@ export default function Home() {
     }, [selectedHeadline])
 
     return (
-        <div className="md:max-w-[92%] mx-auto text-grey h-[100vh]">
-            <Header />
-            <div className="w-screen  flex  ">
-                <div className=" h-[81vh] w-[420px]  bg-[F3EFF0] mr-10 flex justify-center ">
-                    <img
-                        src="/portrait.jpeg"
-                        alt="mainImg"
-                        className=" h-[90%] m-auto rounded drop-shadow-2xl "
-                    />
-                </div>
-
+        <div className="md:max-w-[92%] items-center  text-grey flex ">
+            <div className="w-screen  flex align-center my-auto ">
                 <div className="flex flex-col justify-center ">
                     <p className="uppercase text-[42px] font-[700] leading-[66px] py-4">
                         Chaimae michich
@@ -74,7 +65,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
