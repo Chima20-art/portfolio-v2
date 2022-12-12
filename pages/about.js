@@ -3,7 +3,7 @@ import Header from '../components/header'
 
 export default function About() {
     return (
-        <div className="md:max-w-[92%] mx-auto text-grey h-[100vh] flex flex-col justify-between">
+        <div className=" text-grey   flex flex-col justify-between">
             <div className="w-full  flex ">
                 <div className="flex flex-col ">
                     <div className="flex flex-col   w-full pt-20  h-fit">
