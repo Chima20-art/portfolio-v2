@@ -48,6 +48,7 @@ export default function Home() {
                             {headlines.map((item, index) => {
                                 return (
                                     <b
+                                        key={item.title + '-' + index}
                                         className={`${
                                             index == selectedHeadline
                                                 ? 'is-visible'

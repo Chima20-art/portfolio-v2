@@ -27,7 +27,7 @@ export default function Header() {
                             <div
                                 onMouseEnter={() => setHoveredItem(page.title)}
                                 onMouseLeave={() => setHoveredItem('')}
-                                className=" relative  hover:cursor-pointer  overflow-hidden hover:text-white text-grey  px-[17px] py-[9px]  font-medium   "
+                                className=" relative  hover:cursor-pointer  overflow-hidden  text-grey  px-[17px] py-[9px]  font-medium   "
                             >
                                 <motion.div
                                     initial={{
@@ -45,11 +45,30 @@ export default function Header() {
                                         delay: 0.2,
                                         ease: 'easeIn',
                                     }}
-                                    className="bg-grey h-full w-full absolute right-0 top-0 -z-20 "
-                                ></motion.div>
-                                <p className="  z-[10] w-full h-full   mx-auto h-full bg-transparent  ">
+                                    className="bg-grey h-full w-full absolute right-0 top-0 z-20 "
+                                >
+                                    <p className=" z-[20] text-white w-fit h-fit flex justify-center items-center  mx-auto h-full bg-transparent">
+                                        {page.title}
+                                    </p>
+                                </motion.div>
+                                <motion.p
+                                    animate={
+                                        hoverdItem == page.title
+                                            ? { x: '-105%' }
+                                            : { x: '0%' }
+                                    }
+                                    transition={{
+                                        duration:
+                                            hoverdItem == page.title
+                                                ? 0.2
+                                                : 0.4,
+                                        delay: 0.2,
+                                        ease: 'easeIn',
+                                    }}
+                                    className="  z-[10] w-full h-full   mx-auto h-full bg-transparent  "
+                                >
                                     {page.title}
-                                </p>
+                                </motion.p>
                             </div>
                         </Link>
                     )
