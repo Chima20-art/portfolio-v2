@@ -75,6 +75,29 @@ body {
         scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.edu::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: 12px;
+}
+
+.eduItem::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background: #f6fbff;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+    left: -9px;
+    top: 8px;
+}
+
 @keyframes cd-rotate-1-in {
     0% {
         transform: rotateX(180deg);

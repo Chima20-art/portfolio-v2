@@ -257,6 +257,58 @@ export default function About() {
                             </div>
                         </div>
                     </div>
+                    <div className="flex flex-col xl:flex-row w-full gap-8 pt-24  h-fit justify-between ">
+                        <div className="flex-1 flex flex-col">
+                            <div className="flex w-full items-center mb-6   ">
+                                <p className="text-grey font-[700] text-[14px] uppercase tracking-[7px] mr-6 ">
+                                    EDUCATION
+                                </p>
+                                <span className="bg-grey  w-full flex-1 h-[1px]" />
+                            </div>
+                            <div className="flex flex-col relative edu mt-10 pl-3  text-lightGrey text-[13px] tracking-normal font-normal   leading-8 ">
+                                {education?.map((item) => {
+                                    return (
+                                        <div
+                                            key={item.name}
+                                            className="eduItem relative pl-5"
+                                        >
+                                            {item.name}
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                        <div className="flex-1 flex flex-col ">
+                            <div className="flex w-full items-center mb-6  ">
+                                <p className="text-grey font-[700] text-[14px] uppercase tracking-[7px] mr-6  ">
+                                    interests
+                                </p>
+                                <span className="bg-grey  w-full flex-1 h-[1px]" />
+                            </div>
+                            <ul className="  text-lightGrey text-[13px] tracking-normal font-normal   leading-8 ">
+                                <li className="flex relative   ">
+                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4">Painting & Drawing</p>
+                                </li>
+                                <li className="flex relative  ">
+                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4"> Reading & Writing</p>
+                                </li>
+                                <li className="flex relative  ">
+                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4">Music & Cinema</p>
+                                </li>
+                                <li className="flex relative  ">
+                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4">Travel & Picnik</p>
+                                </li>
+                                <li className="flex relative ">
+                                    <div className=" absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4">Rain & Snow</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
