@@ -1,9 +1,28 @@
 import Footer from '../components/footer'
 import Header from '../components/header'
 
+const programming = [
+    {
+        title: 'HTML & CSS',
+        value: '60%',
+    },
+    {
+        title: 'Javascript',
+        value: '85%',
+    },
+    {
+        title: 'WordPress',
+        value: '90%',
+    },
+    {
+        title: 'Nextjs',
+        value: '100%',
+    },
+]
+
 export default function About() {
     return (
-        <div className="w-full bg-red-300 text-grey   flex flex-col justify-between">
+        <div className="w-full  text-grey   flex flex-col justify-between">
             <div className="w-full  flex ">
                 <div className="flex flex-col ">
                     <div className="flex flex-col   w-full pt-20  h-fit">
@@ -80,6 +99,76 @@ export default function About() {
                                     <p className="ml-4">Web hosting</p>
                                 </li>
                             </ul>
+                        </div>
+                        <div className="flex-1 flex flex-col ">
+                            <div className="flex w-full items-center mb-6  ">
+                                <p className="text-grey font-[700] text-[14px] uppercase tracking-[7px] mr-6  ">
+                                    interests
+                                </p>
+                                <span className="bg-grey  w-full flex-1 h-[1px]" />
+                            </div>
+                            <ul className="  text-lightGrey text-[13px] tracking-normal font-normal   leading-8 ">
+                                <li className="flex relative   ">
+                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4">Painting & Drawing</p>
+                                </li>
+                                <li className="flex relative  ">
+                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4"> Reading & Writing</p>
+                                </li>
+                                <li className="flex relative  ">
+                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4">Music & Cinema</p>
+                                </li>
+                                <li className="flex relative  ">
+                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4">Travel & Picnik</p>
+                                </li>
+                                <li className="flex relative ">
+                                    <div className=" absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
+                                    <p className="ml-4">Rain & Snow</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="flex flex-col xl:flex-row w-full gap-8 pt-24  h-fit justify-between ">
+                        <div className="flex-1 flex flex-col">
+                            <div className="flex w-full items-center mb-6   ">
+                                <p className="text-grey font-[700] text-[14px] uppercase tracking-[7px] mr-6 ">
+                                    PROGRAMMING
+                                </p>
+                                <span className="bg-grey  w-full flex-1 h-[1px]" />
+                            </div>
+                            <div className="flex flex-col  text-lightGrey text-[13px] tracking-normal font-normal   leading-8 ">
+                                {programming?.map((item) => {
+                                    return (
+                                        <div
+                                            key={item?.title}
+                                            className="w-full relative mb-4 "
+                                        >
+                                            <span className="text-base py-1">
+                                                {item?.title}
+                                            </span>
+                                            <span
+                                                className="absolute py-1 -translate-x-[100%]"
+                                                style={{
+                                                    left: item?.value,
+                                                }}
+                                            >
+                                                {item?.value}
+                                            </span>
+                                            <div className="w-full h-1 bg-lightGrey/30">
+                                                <div
+                                                    className={`bg-lightGrey/70 h-1 `}
+                                                    style={{
+                                                        width: item?.value,
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
                         <div className="flex-1 flex flex-col ">
                             <div className="flex w-full items-center mb-6  ">
