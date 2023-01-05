@@ -20,6 +20,39 @@ const programming = [
     },
 ]
 
+const languages = [
+    {
+        title: 'English',
+        value: '0.95',
+    },
+    {
+        title: 'Russian',
+        value: '0.80',
+    },
+    {
+        title: 'Arabic',
+        value: '0.90',
+    },
+]
+
+const education = [
+    {
+        place: 'Oxford Univercity',
+        name: 'Master Degree',
+        year: '2014 - 2016',
+    },
+    {
+        place: 'Oxford Univercity',
+        name: 'Master Degree',
+        year: '2014 - 2016',
+    },
+    {
+        place: 'Oxford Univercity',
+        name: 'Master Degree',
+        year: '2014 - 2016',
+    },
+]
+
 export default function About() {
     return (
         <div className="w-full  text-grey   flex flex-col justify-between">
@@ -173,32 +206,55 @@ export default function About() {
                         <div className="flex-1 flex flex-col ">
                             <div className="flex w-full items-center mb-6  ">
                                 <p className="text-grey font-[700] text-[14px] uppercase tracking-[7px] mr-6  ">
-                                    interests
+                                    LANGUAGE
                                 </p>
                                 <span className="bg-grey  w-full flex-1 h-[1px]" />
                             </div>
-                            <ul className="  text-lightGrey text-[13px] tracking-normal font-normal   leading-8 ">
-                                <li className="flex relative   ">
-                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Painting & Drawing</p>
-                                </li>
-                                <li className="flex relative  ">
-                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4"> Reading & Writing</p>
-                                </li>
-                                <li className="flex relative  ">
-                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Music & Cinema</p>
-                                </li>
-                                <li className="flex relative  ">
-                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Travel & Picnik</p>
-                                </li>
-                                <li className="flex relative ">
-                                    <div className=" absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Rain & Snow</p>
-                                </li>
-                            </ul>
+                            <div className="flex text-lightGrey text-[13px] tracking-normal font-normal justify-between   leading-8 ">
+                                {languages?.map((item) => {
+                                    return (
+                                        <div
+                                            key={item?.title}
+                                            className=" flex-[0_0_30%]  flex flex-col items-center justify-center w-full h-full text-lightGrey"
+                                        >
+                                            <div className="relative mb-2 text-lightGrey ">
+                                                <svg
+                                                    className="circle stroke-lightGrey"
+                                                    width="w-full"
+                                                    height="120"
+                                                    viewBox="0 0 120 120"
+                                                >
+                                                    <circle
+                                                        className="stroke-lightGrey opacity-30"
+                                                        cx="60"
+                                                        cy="60"
+                                                        r="54"
+                                                        pathLength="1"
+                                                        stroke-linecap="round"
+                                                        stroke-width="6"
+                                                    ></circle>
+                                                    <circle
+                                                        cx="60"
+                                                        cy="60"
+                                                        r="54"
+                                                        stroke-linecap="round"
+                                                        stroke-width="6"
+                                                        opacity="1"
+                                                        pathLength="1"
+                                                        stroke-dashoffset="0px"
+                                                        stroke-dasharray={`${item.value}px 1px`}
+                                                    ></circle>
+                                                </svg>
+                                                <div className="absolute text-[16px] top-0 left-0 w-full h-full flex z-40 items-center justify-center ">
+                                                    {item?.value * 100}%
+                                                </div>
+                                            </div>
+
+                                            <span>{item?.title}</span>
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>
