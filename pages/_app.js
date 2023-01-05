@@ -16,22 +16,22 @@ function MyApp({ Component, pageProps, router }) {
     }, [])
 
     return (
-        <div className="relative w-full h-screen mx-auto flex flex-col  text-grey ">
+        <div className="w-screen px-[4%]  mx-auto w-full h-screen mx-auto flex flex-col scrollbar-hide  text-grey ">
             {loading && <Loading />}
-            <div className="w-[92%]  mx-auto">
-                <Header />
-            </div>
-            <div className="w-[92%]  mx-auto flex flex-1 h-[calc(100vh_-_112px)]  gap-4 ">
+
+            <Header />
+
+            <div className="w-full   flex flex-1 h-[calc(100vh_-_112px)]  gap-12 scrollbar-hide ">
                 <img
                     src="/portrait.jpeg"
                     alt="mainImg"
-                    className="w-[420px]   rounded drop-shadow-2xl "
+                    className="hidden w-fit lg:w-[400px] xl:w-fit  lg:flex  object-contain lg:object-cover xl:object-contain h-full bg-red-300 rounded drop-shadow-2xl "
                 />
 
                 <AnimatePresence mode="wait" initial={false}>
                     <motion.div
                         key={router.asPath}
-                        className="  flex-1  overflow-y-scroll	 pl-8 scrollbar-hide	  "
+                        className="w-full flex-1  overflow-scroll scrollbar-hide	  "
                         style={{
                             originX: '0%',
                             originY: '50%',
@@ -60,9 +60,8 @@ function MyApp({ Component, pageProps, router }) {
                     </motion.div>
                 </AnimatePresence>
             </div>
-            <div className="w-[92%]  mx-auto">
-                <Footer />
-            </div>
+
+            <Footer />
         </div>
     )
 }
