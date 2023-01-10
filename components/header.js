@@ -6,7 +6,7 @@ export default function Header() {
     const pages = [
         { title: 'Home', url: '/' },
         { title: 'About', url: '/about' },
-        { title: 'Portfolio', url: '/' },
+        { title: 'Portfolio', url: '/portfolio' },
         { title: 'Service', url: '/' },
         { title: 'News', url: '/' },
         { title: 'Contact', url: '/' },
