@@ -37,19 +37,36 @@ const languages = [
 
 const education = [
     {
-        place: 'Oxford Univercity',
+        place: 'Oxford University',
         name: 'Master Degree',
         year: '2014 - 2016',
     },
     {
-        place: 'Oxford Univercity',
+        place: 'Oxford University',
         name: 'Master Degree',
         year: '2014 - 2016',
     },
     {
-        place: 'Oxford Univercity',
+        place: 'Oxford University',
         name: 'Master Degree',
         year: '2014 - 2016',
+    },
+]
+const projects = [
+    {
+        name: 'Envato Elements',
+        role: 'Exclusive Author',
+        year: '2018- running',
+    },
+    {
+        name: 'Avo Corporation',
+        role: 'Content Manager',
+        year: '2015 - 2018',
+    },
+    {
+        name: 'FC Barcelona',
+        role: 'Football Player',
+        year: '2012 - 2015',
     },
 ]
 
@@ -265,14 +282,24 @@ export default function About() {
                                 </p>
                                 <span className="bg-grey  w-full flex-1 h-[1px]" />
                             </div>
-                            <div className="flex flex-col relative edu mt-10 pl-3  text-lightGrey text-[13px] tracking-normal font-normal   leading-8 ">
+                            <div className="flex flex-col relative edu mt-10 pl-3  text-lightGrey text-[13px] tracking-normal font-normal    ">
                                 {education?.map((item) => {
                                     return (
                                         <div
                                             key={item.name}
-                                            className="eduItem relative pl-5"
+                                            className="eduItem relative pl-5  flex   my-2  "
                                         >
-                                            {item.name}
+                                            <div className="mr-12 bg-gray-200 rounded-full px-8 h-fit py-2 ">
+                                                {item.year}
+                                            </div>
+                                            <div className="flex flex-col ">
+                                                <div className="text-black font-[600] text-[16px] capitalize ">
+                                                    {item.place}
+                                                </div>
+                                                <div className="pt-1">
+                                                    {item.name}
+                                                </div>
+                                            </div>
                                         </div>
                                     )
                                 })}
@@ -281,32 +308,35 @@ export default function About() {
                         <div className="flex-1 flex flex-col ">
                             <div className="flex w-full items-center mb-6  ">
                                 <p className="text-grey font-[700] text-[14px] uppercase tracking-[7px] mr-6  ">
-                                    interests
+                                    Projects
                                 </p>
                                 <span className="bg-grey  w-full flex-1 h-[1px]" />
                             </div>
-                            <ul className="  text-lightGrey text-[13px] tracking-normal font-normal   leading-8 ">
-                                <li className="flex relative   ">
-                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Painting & Drawing</p>
-                                </li>
-                                <li className="flex relative  ">
-                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4"> Reading & Writing</p>
-                                </li>
-                                <li className="flex relative  ">
-                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Music & Cinema</p>
-                                </li>
-                                <li className="flex relative  ">
-                                    <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Travel & Picnik</p>
-                                </li>
-                                <li className="flex relative ">
-                                    <div className=" absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Rain & Snow</p>
-                                </li>
-                            </ul>
+                            <div className="flex flex-col relative edu mt-10 pl-3  text-lightGrey text-[13px] tracking-normal font-normal    ">
+                                {projects?.map((project) => {
+                                    return (
+                                        <div
+                                            key={project.name}
+                                            className="eduItem relative pl-5  flex   my-2    "
+                                        >
+                                            <div className="min-w-[40%] mr-4 ">
+                                                <div className="bg-gray-200 rounded-full px-8 h-fit py-2 w-fit">
+                                                    {project.year}
+                                                </div>
+                                            </div>
+
+                                            <div className="flex flex-col  ">
+                                                <div className="text-black font-[600] text-[16px] capitalize  hover:underline cursor-pointer">
+                                                    {project.name}
+                                                </div>
+                                                <div className="pt-1">
+                                                    {project.role}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>
