@@ -30,6 +30,7 @@ const Projects = [
         title: 'Auto ecole alwafaa',
         description: 'driving school website ',
         categories: ['Nextjs'],
+
         url: 'https://github.com/Chima20-art/dri-school',
         image: '/autoecole.png',
     },

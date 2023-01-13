@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Footer from '../components/footer'
 import Header from '../components/header'
 
@@ -54,19 +55,22 @@ const education = [
 ]
 const projects = [
     {
-        name: 'Envato Elements',
-        role: 'Exclusive Author',
-        year: '2018- running',
+        name: 'My Portfolio',
+        role: 'this website',
+        year: '2023- running',
+        url: 'https://github.com/Chima20-art/portfolio-v2',
     },
     {
-        name: 'Avo Corporation',
-        role: 'Content Manager',
-        year: '2015 - 2018',
+        name: 'The student Forum',
+        role: 'Bachelor Thesis ',
+        year: '05/2022-06/2022',
+        url: 'https://github.com/Chima20-art/student-forum',
     },
     {
-        name: 'FC Barcelona',
-        role: 'Football Player',
-        year: '2012 - 2015',
+        name: 'Auto-ecole Alwafa',
+        role: 'Driving school website',
+        year: ' 12/2022-01/2023',
+        url: 'https://github.com/Chima20-art/dri-school',
     },
 ]
 
@@ -338,9 +342,12 @@ export default function About() {
                                             </div>
 
                                             <div className="flex flex-col  ">
-                                                <div className="text-black font-[600] text-[16px] capitalize  hover:underline cursor-pointer">
+                                                <Link
+                                                    href={project.url}
+                                                    className="text-black font-[600] text-[16px] capitalize  hover:underline cursor-pointer"
+                                                >
                                                     {project.name}
-                                                </div>
+                                                </Link>
                                                 <div className="pt-1">
                                                     {project.role}
                                                 </div>
