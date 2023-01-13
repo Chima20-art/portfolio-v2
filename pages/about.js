@@ -4,52 +4,52 @@ import Header from '../components/header'
 const programming = [
     {
         title: 'HTML & CSS',
-        value: '60%',
+        value: '95%',
     },
     {
         title: 'Javascript',
         value: '85%',
     },
     {
-        title: 'WordPress',
-        value: '90%',
+        title: 'ReactJs',
+        value: '85%',
     },
     {
         title: 'Nextjs',
-        value: '100%',
+        value: '85%',
     },
 ]
 
 const languages = [
     {
         title: 'English',
-        value: '0.95',
+        value: '0.90',
+    },
+    {
+        title: 'French',
+        value: '0.90',
     },
     {
         title: 'Russian',
-        value: '0.80',
-    },
-    {
-        title: 'Arabic',
-        value: '0.90',
+        value: '0.70',
     },
 ]
 
 const education = [
     {
-        place: 'Oxford University',
-        name: 'Master Degree',
-        year: '2014 - 2016',
+        place: 'Kharkiv National University of Radio Electronics',
+        name: 'Masters in Cyber Security',
+        year: '2022 - present',
     },
     {
-        place: 'Oxford University',
-        name: 'Master Degree',
-        year: '2014 - 2016',
+        place: ' Kharkiv National University of Radio Electronics',
+        name: 'BSc in Computer Engineering',
+        year: '2017 - 2022',
     },
     {
-        place: 'Oxford University',
-        name: 'Master Degree',
-        year: '2014 - 2016',
+        place: 'High School',
+        name: 'Higher School Graduation',
+        year: '2017',
     },
 ]
 const projects = [
@@ -88,15 +88,19 @@ export default function About() {
                                     Hello there! My name is{' '}
                                     <span className="font-bold">
                                         Chaimae Michich
-                                    </span>
-                                    . I am a graphic designer, and I'm very
-                                    passionate and dedicated to my work.
+                                    </span>{' '}
+                                    and I am thrilled to introduce myself as a
+                                    passionate and dedicated JavaScript
+                                    developer.
                                 </p>
                                 <p className="mt-4">
-                                    With 20 years experience as a professional a
-                                    graphic designer, I have acquired the skills
-                                    and knowledge necessary to make your project
-                                    a success.
+                                    My enthusiasm for coding is matched only by
+                                    my commitment to excellence in all my
+                                    projects. I am confident in my ability to
+                                    work with both NextJS and ReactJS, and I am
+                                    eager to use my skills to bring your ideas
+                                    to life. . I am a graphic designer, and I'm
+                                    very passionate and dedicated to my work.
                                 </p>
                             </div>
                             <div className=" flex-1  flex text-lightGrey  text-[13px]   ">
@@ -110,11 +114,15 @@ export default function About() {
                                 </p>
                                 <p className="  flex flex-col  ml-6 h-full text-[13px]   py-4  gap-3">
                                     <span> Chaimae Michich</span>
-                                    <span>Ave Street, New York, USA</span>
-                                    <span> Univercity of Oxford</span>
+                                    <span>Ave Street, </span>
+                                    <span>
+                                        {' '}
+                                        Kharkiv national university of
+                                        radioelctronics
+                                    </span>
                                     <span>Master of Science</span>
                                     <span>michichchaimae@gmail.com</span>
-                                    <span>+77 022 444 05 05</span>
+                                    <span>+380 98 357 19 66</span>
                                 </p>
                             </div>
                         </div>
@@ -160,23 +168,25 @@ export default function About() {
                             <ul className="  text-lightGrey text-[13px] tracking-normal font-normal   leading-8 ">
                                 <li className="flex relative   ">
                                     <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Painting & Drawing</p>
+                                    <p className="ml-4">
+                                        Software development and programming
+                                    </p>
                                 </li>
                                 <li className="flex relative  ">
                                     <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4"> Reading & Writing</p>
+                                    <p className="ml-4">Computer engineering</p>
                                 </li>
                                 <li className="flex relative  ">
                                     <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Music & Cinema</p>
+                                    <p className="ml-4">Computer sciences</p>
                                 </li>
                                 <li className="flex relative  ">
                                     <div className="absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Travel & Picnik</p>
+                                    <p className="ml-4">Communication</p>
                                 </li>
                                 <li className="flex relative ">
                                     <div className=" absolute left-0 top-[25%] border-t-transparent border-t-[5.5px] border-l-[0px] border-b-[5.5px] border-l-[9.5px] border-b-transparent border-l-[#7d7789]" />
-                                    <p className="ml-4">Rain & Snow</p>
+                                    <p className="ml-4">Time Management</p>
                                 </li>
                             </ul>
                         </div>
@@ -289,15 +299,17 @@ export default function About() {
                                             key={item.name}
                                             className="eduItem relative pl-5  flex   my-2  "
                                         >
-                                            <div className="mr-12 bg-gray-200 rounded-full px-8 h-fit py-2 ">
-                                                {item.year}
+                                            <div className="min-w-[40%] mr-4 ">
+                                                <div className="bg-gray-200 rounded-full px-8 h-fit py-2 w-fit">
+                                                    {item.year}
+                                                </div>
                                             </div>
                                             <div className="flex flex-col ">
-                                                <div className="text-black font-[600] text-[16px] capitalize ">
-                                                    {item.place}
+                                                <div className="text-black font-[600] text-[14px] capitalize ">
+                                                    {item.name}
                                                 </div>
                                                 <div className="pt-1">
-                                                    {item.name}
+                                                    {item.year}
                                                 </div>
                                             </div>
                                         </div>
