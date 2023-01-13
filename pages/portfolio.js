@@ -1,35 +1,65 @@
 import react from 'react'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { AiFillGithub } from 'react-icons/ai'
+import { TbExternalLink } from 'react-icons/tb'
 
 const Projects = [
     {
         title: 'Portfolio',
-        description: 'sadalsd sd;adsa adasd ',
-        categories: ['Nextjs', 'TailwindCss'],
-        url: '/',
-        image: '/Screenshot1.png',
+        description: 'My personal website',
+        categories: ['Nextjs'],
+        url: 'https://github.com/Chima20-art/portfolio-v2',
+        image: '/portfolio.png',
     },
     {
         title: 'Procktage',
-        description: 'sadalsd sd;adsa adasd ',
-        categories: ['sanity.io', 'Nextjs'],
-        url: '/',
-        image: '/Screenshot2.png',
+        description: 'ecommerce website ',
+        categories: ['Sanity.io', 'Nextjs'],
+        url: 'https://github.com/Chima20-art/procktage-frontend',
+        image: '/procktage.png',
     },
     {
-        title: 'student forum',
-        description: 'sadalsd sd;adsa adasd ',
+        title: 'The student forum',
+        description: 'A digital university student forum ',
         categories: ['Nextjs'],
-        url: '/',
-        image: '/Screenshot2.png',
+        url: 'https://github.com/Chima20-art/student-forum',
+        image: '/studentforum.png',
     },
     {
-        title: 'gym management-system',
-        description: 'sadalsd sd;adsa adasd ',
-        categories: ['Reactjs'],
-        url: '/',
-        image: '/Screenshot2.png',
+        title: 'Auto ecole alwafaa',
+        description: 'driving school website ',
+        categories: ['Nextjs'],
+        url: 'https://github.com/Chima20-art/dri-school',
+        image: '/autoecole.png',
+    },
+    {
+        title: 'Association rabat kickboxing',
+        description: 'Gym Management System ',
+        categories: ['Nextjs'],
+        url: 'https://github.com/Chima20-art/gym-frontend',
+        image: '/gym.png',
+    },
+    {
+        title: 'Nordic Rose',
+        description: 'Online blog ',
+        categories: ['Nextjs', 'Sanity.io'],
+        url: 'https://github.com/Chima20-art/blog-Next',
+        image: '/blog.png',
+    },
+    {
+        title: 'covid-19 map',
+        description: 'confirmed Covid-19 cases around the world. ',
+        categories: ['React'],
+        url: 'https://github.com/Chima20-art/coronavirus-world-map',
+        image: '/map.png',
+    },
+    {
+        title: 'React web-app',
+        description: 'DSI’s shared service solutions ',
+        categories: ['React'],
+        url: 'https://github.com/Chima20-art/community-website',
+        image: '/community.png',
     },
 ]
 
@@ -95,7 +125,7 @@ export default function Portfolio() {
                 })}
             </div>
 
-            <div className=" mx-auto flex flex-wrap gap-12  mt-8">
+            <div className=" mx-auto flex flex-wrap gap-12  py-8 ">
                 {specificProjects?.map((item) => {
                     return (
                         <AnimatePresence mode="wait">
@@ -105,9 +135,29 @@ export default function Portfolio() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.5 }}
                                 transition={{ duration: 0.3 }}
-                                className="w-[45%] cursor-pointer"
+                                className="group relative w-[45%]  cursor-pointer shadow-xl "
                             >
-                                <img src={item.image} />
+                                <img
+                                    src={item.image}
+                                    className=" grayscale hover:grayscale-0  object-cover h-full  "
+                                />
+                                <div className="hidden  group-hover:flex group-hover:flex-col group-hover:shadow-md group-hover:absolute  group-hover:border-t group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:bg-white group-hover:z-5 group-hover:mx-auto">
+                                    {' '}
+                                    <div className=" bg-white w-[95%]  p-2 mx-auto">
+                                        <div className="font-[600] flex justify-between">
+                                            <p>{item.title}</p>
+                                            <div
+                                                className="hovertext flex gap-1 "
+                                                data-hover=" //github link"
+                                            >
+                                                <AiFillGithub className="text-2xl" />
+                                            </div>
+                                        </div>
+                                        <p className="text-[12px] text-gray-400">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                </div>
                             </motion.div>
                         </AnimatePresence>
                     )
