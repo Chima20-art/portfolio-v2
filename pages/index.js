@@ -4,6 +4,7 @@ import Header from '../components/header'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Footer from '../components/footer'
+import Link from 'next/link'
 
 export default function Home() {
     const [showButton, setShowButton] = useState(false)
@@ -61,9 +62,12 @@ export default function Home() {
                             })}
                         </span>
                     </div>
-                    <div className="py-[14px]  px-[26px] bg-grey  text-white w-fit cursor-pointer font-[500] text-[16px] border-grey border-[2px] hover:bg-white hover:text-grey rounded">
+                    <Link
+                        href="/about"
+                        className="py-[14px]  px-[26px] bg-grey  text-white w-fit cursor-pointer font-[500] text-[16px] border-grey border-[2px] hover:bg-white hover:text-grey rounded"
+                    >
                         Learn more
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>
