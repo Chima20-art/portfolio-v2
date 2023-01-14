@@ -45,19 +45,19 @@ const Service = [
 
 export default function Services() {
     return (
-        <div className=" h-fit w-[85%] mx-auto  pt-12  ">
+        <div className=" h-fit  w-full mx-auto  pt-12  ">
             <div className="flex  items-center py-8  ">
                 <p className="text-grey font-[700] uppercase tracking-[7px] mr-6  text-[18px]">
                     Services
                 </p>
                 <span className="bg-grey  w-full flex-1 h-[1px]" />
             </div>
-            <div className="mx-auto flex flex-wrap gap-4   py-8">
+            <div className="mx-auto flex flex-wrap gap-12 justify-around  py-8">
                 {Service.map((item) => {
                     return (
-                        <div className="group border border-gray-300  cursor-pointer hover:bg-[#0f070a] py-12 items-center align-center flex flex-col xl:w-[48%] lg:w-[80%]  w-full ">
+                        <div className="group border border-gray-300  cursor-pointer hover:bg-[#0f070a] py-12 items-center align-center flex flex-col md:w-[44%]   w-full ">
                             <item.Icon className="w-[60px] h-[60px] group-hover:text-white" />
-                            <h3 className="font-[500]  text-center text-[24px] text-[#333] group-hover:text-white my-6">
+                            <h3 className="font-[500] w-[95%] text-center text-[24px] text-[#333] group-hover:text-white my-4">
                                 {' '}
                                 {item.title}
                             </h3>
