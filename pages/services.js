@@ -52,10 +52,10 @@ export default function Services() {
                 </p>
                 <span className="bg-grey  w-full flex-1 h-[1px]" />
             </div>
-            <div className="mx-auto flex flex-wrap gap-12  py-8">
+            <div className="mx-auto flex flex-wrap gap-4   py-8">
                 {Service.map((item) => {
                     return (
-                        <div className="group border border-gray-300  cursor-pointer hover:bg-[#0f070a] py-12 items-center align-center flex flex-col w-[45%] ">
+                        <div className="group border border-gray-300  cursor-pointer hover:bg-[#0f070a] py-12 items-center align-center flex flex-col xl:w-[48%] lg:w-[80%]  w-full ">
                             <item.Icon className="w-[60px] h-[60px] group-hover:text-white" />
                             <h3 className="font-[500]  text-center text-[24px] text-[#333] group-hover:text-white my-6">
                                 {' '}
