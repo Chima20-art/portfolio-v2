@@ -86,7 +86,7 @@ export default function Portfolio() {
     console.log(category)
 
     return (
-        <div className=" h-screen w-[85%] mx-auto">
+        <div className=" h-screen w-[85%] mx-auto  pt-12 ">
             <div className="flex  items-center py-8  ">
                 <p className="text-grey font-[700] uppercase tracking-[7px] mr-6  text-[18px]">
                     PORTFOLIO
