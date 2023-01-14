@@ -136,7 +136,7 @@ export default function Portfolio() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.5 }}
                                 transition={{ duration: 0.3 }}
-                                className="group relative w-[45%]  cursor-pointer shadow-xl "
+                                className="group relative md:w-[44%] w-full  cursor-pointer shadow-xl "
                             >
                                 <img
                                     src={item.image}
