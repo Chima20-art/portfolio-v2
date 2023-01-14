@@ -8,7 +8,6 @@ export default function Header() {
         { title: 'About', url: '/about' },
         { title: 'Portfolio', url: '/portfolio' },
         { title: 'Service', url: '/services' },
-        { title: 'News', url: '/' },
         { title: 'Contact', url: '/' },
     ]
     const [hoverdItem, setHoveredItem] = useState('')
@@ -51,7 +50,7 @@ export default function Header() {
                                             delay: 0.2,
                                             ease: 'easeIn',
                                         }}
-                                        className="bg-grey h-full w-full absolute right-0 top-0 z-20 "
+                                        className="bg-grey h-full w-full flex align-center items-center absolute right-0 top-0 z-20  "
                                     >
                                         <p className=" z-[20] text-white w-fit h-fit flex justify-center items-center  mx-auto h-full bg-transparent">
                                             {page.title}
