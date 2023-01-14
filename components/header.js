@@ -7,7 +7,7 @@ export default function Header() {
         { title: 'Home', url: '/' },
         { title: 'About', url: '/about' },
         { title: 'Portfolio', url: '/portfolio' },
-        { title: 'Service', url: '/' },
+        { title: 'Service', url: '/services' },
         { title: 'News', url: '/' },
         { title: 'Contact', url: '/' },
     ]
