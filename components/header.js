@@ -7,8 +7,8 @@ export default function Header() {
         { title: 'Home', url: '/' },
         { title: 'About', url: '/about' },
         { title: 'Portfolio', url: '/portfolio' },
-        { title: 'Service', url: '/services' },
-        { title: 'Contact', url: '/' },
+        { title: 'Services', url: '/services' },
+        { title: 'Contact', url: '/contact' },
     ]
     const [hoverdItem, setHoveredItem] = useState('')
     const [showMobileMenu, setShowMobileMenu] = useState(false)
