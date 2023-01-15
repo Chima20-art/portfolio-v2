@@ -16,7 +16,7 @@ export default function Home() {
             title: 'Freelancer',
         },
         {
-            title: 'Designer',
+            title: 'Programmer',
         },
     ])
     const [selectedHeadline, setSelectedHeadline] = useState(0)
