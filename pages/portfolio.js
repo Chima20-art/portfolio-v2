@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AiFillGithub } from 'react-icons/ai'
 import { TbExternalLink } from 'react-icons/tb'
+import Link from 'next/link'
 
 const Projects = [
     {
@@ -65,6 +66,7 @@ const Projects = [
 ]
 
 export default function Portfolio() {
+    const [hovered, setHovered] = useState(false)
     var buttons = []
     const [category, setCategory] = useState('')
     const [clicked, setClicked] = useState('All')
@@ -136,29 +138,54 @@ export default function Portfolio() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.5 }}
                                 transition={{ duration: 0.3 }}
+                                onHoverStart={() => setHovered(true)}
+                                onHoverEnd={() => setHovered(false)}
                                 className="group relative md:w-[44%] w-full  cursor-pointer shadow-xl "
                             >
                                 <img
                                     src={item.image}
                                     className=" grayscale hover:grayscale-0  object-cover h-full  "
                                 />
-                                <div className="hidden  group-hover:flex group-hover:flex-col group-hover:shadow-md group-hover:absolute  group-hover:border-t group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:bg-white group-hover:z-5 group-hover:mx-auto">
-                                    {' '}
-                                    <div className=" bg-white w-[95%]  p-2 mx-auto">
-                                        <div className="font-[600] flex justify-between">
-                                            <p>{item.title}</p>
-                                            <div
-                                                className="hovertext flex gap-1 "
-                                                data-hover=" //github link"
-                                            >
-                                                <AiFillGithub className="text-2xl" />
+
+                                <AnimatePresence>
+                                    <motion.div
+                                        key={item?.description}
+                                        initial={{
+                                            opacity: 0,
+                                            //scale: 0.1,
+                                            y: '100%',
+                                        }}
+                                        animate={
+                                            hovered
+                                                ? {
+                                                      opacity: 1,
+                                                      scale: 1,
+                                                      y: '0%',
+                                                  }
+                                                : {}
+                                        }
+                                        className="hidden  group-hover:flex group-hover:flex-col group-hover:shadow-md group-hover:absolute  group-hover:border-t group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:bg-white group-hover:z-5 group-hover:mx-auto"
+                                    >
+                                        <div
+                                            transition={{ duration: 1 }}
+                                            className=" bg-white w-[100%]  p-2 mx-auto"
+                                        >
+                                            <div className="font-[600] flex justify-between">
+                                                <p>{item.title}</p>
+                                                <Link
+                                                    href={item.url}
+                                                    className="hovertext flex gap-1 "
+                                                    data-hover=" //github link"
+                                                >
+                                                    <AiFillGithub className="text-2xl" />
+                                                </Link>
                                             </div>
+                                            <p className="text-[12px] text-gray-400">
+                                                {item.description}
+                                            </p>
                                         </div>
-                                        <p className="text-[12px] text-gray-400">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                </div>
+                                    </motion.div>
+                                </AnimatePresence>
                             </motion.div>
                         </AnimatePresence>
                     )
