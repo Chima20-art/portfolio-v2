@@ -65,8 +65,8 @@ export default function Contact() {
                             key={contact.description}
                             className="flex flex-col justify center align center flex-1  border border-grey-400 w-full md:py-10 py-6 px-2 text-center "
                         >
-                            <contact.icon className=" w-full mb-4" />
-                            <p className=" text-[#7d7789] text-[12px] ">
+                            <contact.icon className=" w-full mb-4 text-2xl" />
+                            <p className=" text-[#7d7789] text-[14px] ">
                                 {contact.description}
                             </p>
                         </div>
