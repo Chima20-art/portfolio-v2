@@ -58,19 +58,19 @@ const projects = [
         name: 'My Portfolio',
         role: 'this website',
         year: '2023- running',
-        url: 'https://github.com/Chima20-art/portfolio-v2',
+        url: 'https://www.michich.com/',
     },
     {
         name: 'The student Forum',
         role: 'Bachelor Thesis ',
         year: '05/2022-06/2022',
-        url: 'https://github.com/Chima20-art/student-forum',
+        url: 'https://student-forum.vercel.app/',
     },
     {
         name: 'Auto-ecole Alwafa',
         role: 'Driving school website',
         year: ' 12/2022-01/2023',
-        url: 'https://github.com/Chima20-art/dri-school',
+        url: 'https://dri-school.vercel.app/',
     },
 ]
 
