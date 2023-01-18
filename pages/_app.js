@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps, router }) {
 
             <div className="w-full   flex flex-1 h-[calc(100vh_-_112px)]  gap-12 scrollbar-hide ">
                 <img
-                    src="/portrait.jpeg"
+                    src="/portrait2.JPG"
                     alt="mainImg"
                     className="hidden w-fit lg:w-[400px] xl:w-fit  lg:flex  object-contain lg:object-cover xl:object-contain h-full bg-red-300 rounded drop-shadow-2xl "
                 />
