@@ -103,8 +103,7 @@ export default function About() {
                                     projects. I am confident in my ability to
                                     work with both NextJS and ReactJS, and I am
                                     eager to use my skills to bring your ideas
-                                    to life. . I am a graphic designer, and I'm
-                                    very passionate and dedicated to my work.
+                                    to life.
                                 </p>
                             </div>
                             <div className=" flex-1  flex text-lightGrey  text-[13px]   ">
