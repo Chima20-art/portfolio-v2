@@ -140,7 +140,7 @@ export default function Portfolio() {
                                 transition={{ duration: 0.3 }}
                                 onHoverStart={() => setHovered(true)}
                                 onHoverEnd={() => setHovered(false)}
-                                className="group relative md:w-[44%] w-full  cursor-pointer shadow-xl "
+                                className="group relative md:w-[44%] w-full   cursor-pointer shadow-xl "
                             >
                                 <img
                                     src={item.image}

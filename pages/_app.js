@@ -37,12 +37,14 @@ function MyApp({ Component, pageProps, router }) {
 
                 <Header />
 
-                <div className="w-full   flex flex-1 h-[calc(100vh_-_112px)]  gap-12 scrollbar-hide ">
-                    <img
-                        src="/headShot.jpg"
-                        alt="main Img"
-                        className="hidden w-fit lg:w-[400px] xl:w-fit  lg:flex  object-contain lg:object-cover xl:object-contain h-full bg-red-300 rounded drop-shadow-2xl "
-                    />
+                <div className="w-full   flex flex-1 h-[calc(100vh_-_112px)]  justify-start gap-12 scrollbar-hide ">
+                    <div className="hidden lg:flex  max-w-[50%]">
+                        <img
+                            src="/headShot.jpg"
+                            alt="main Img"
+                            className=" w-fit lg:w-[400px] xl:w-fit    object-contain lg:object-cover xl:object-contain h-full rounded drop-shadow-2xl "
+                        />
+                    </div>
 
                     <AnimatePresence mode="wait" initial={false}>
                         <motion.div
