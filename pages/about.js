@@ -106,27 +106,68 @@ export default function About() {
                                     to life.
                                 </p>
                             </div>
-                            <div className=" flex-1  flex text-lightGrey  text-[13px]   ">
-                                <p className="font-bold  flex flex-col  text-[13px]   py-4  gap-3">
-                                    <span>Name:</span>
-                                    <span>Address:</span>
-                                    <span>Study:</span>
-                                    <span>Degree:</span>
-                                    <span>Mail:</span>
-                                    <span>Phone:</span>
-                                </p>
-                                <p className="  flex flex-col  ml-6 h-full text-[13px]   py-4  gap-3">
-                                    <span> Chaimae Michich</span>
-                                    <span>Ave Street, </span>
-                                    <span>
+                            <div className=" flex-1  flex text-lightGrey flex-col  text-[13px] ">
+                                <div className="flex flex-row  py-2">
+                                    {' '}
+                                    <span className="w-[80px] font-bold    text-[13px]     ">
+                                        Name:
+                                    </span>
+                                    <span className=" flex   ml-6 h-full text-[13px]    ">
+                                        {' '}
+                                        Chaimae Michich
+                                    </span>
+                                </div>
+                                <div className="flex flex-row  py-2">
+                                    {' '}
+                                    <span className="w-[80px] font-bold    text-[13px]  ">
+                                        Address:
+                                    </span>
+                                    <span className=" flex   ml-6 h-full text-[13px]  ">
+                                        {' '}
+                                        Ave Street,
+                                    </span>
+                                </div>
+                                <div className="flex flex-row py-2">
+                                    {' '}
+                                    <span className="w-[80px] font-bold    text-[13px]   ">
+                                        Study:
+                                    </span>
+                                    <span className=" flex   ml-6 h-full text-[13px] ">
                                         {' '}
                                         Kharkiv national university of
                                         radioelctronics
                                     </span>
-                                    <span>Master of Science</span>
-                                    <span>michichchaimae@gmail.com</span>
-                                    <span>+380 98 357 19 66</span>
-                                </p>
+                                </div>
+                                <div className="flex flex-row py-2">
+                                    {' '}
+                                    <span className="w-[80px] font-bold    text-[13px]  ">
+                                        Degree:
+                                    </span>
+                                    <span className=" flex   ml-6 h-full text-[13px] ">
+                                        {' '}
+                                        Master of Science
+                                    </span>
+                                </div>
+                                <div className="flex flex-row py-2">
+                                    {' '}
+                                    <span className="w-[80px] font-bold    text-[13px]">
+                                        Mail::
+                                    </span>
+                                    <span className=" flex   ml-6 h-full text-[13px] ">
+                                        {' '}
+                                        michichchaimae@gmail.com
+                                    </span>
+                                </div>
+                                <div className="flex flex-row py-2">
+                                    {' '}
+                                    <span className="w-[80px] font-bold    text-[13px] ">
+                                        Phone:
+                                    </span>
+                                    <span className=" flex   ml-6 h-full text-[13px]  ">
+                                        {' '}
+                                        +380 98 357 19 66
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
