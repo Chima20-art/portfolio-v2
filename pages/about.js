@@ -117,7 +117,7 @@ export default function About() {
                                         Chaimae Michich
                                     </span>
                                 </div>
-                                <div className="flex flex-row  py-2">
+                                <div className="flex flex-row py-2">
                                     {' '}
                                     <span className="w-[80px] font-bold    text-[13px]  ">
                                         Address:

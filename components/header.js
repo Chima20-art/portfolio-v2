@@ -151,7 +151,14 @@ export default function Header() {
                                     </svg>
                                 </div>
                             </div>
-                            <div className="flex-1 flex flex-col items-center justify-center gap-4">
+
+                            <div className="flex-1 flex flex-col items-center justify-center pt-4 gap-4 ">
+                                <img
+                                    src="/headshot.jpg"
+                                    width="150px"
+                                    height="150px"
+                                    className="shadow-lg mx-auto"
+                                />
                                 {pages?.map((item) => {
                                     return (
                                         <Link
@@ -159,7 +166,7 @@ export default function Header() {
                                                 setShowMobileMenu(false)
                                             }
                                             href={item.url}
-                                            className=" text-2xl min-w-[30vw] text-start hover:underline hover:font-bold"
+                                            className=" text-2xl min-w-[30vw] text-center hover:underline hover:font-bold"
                                             key={item?.title}
                                         >
                                             {item?.title}
@@ -179,6 +186,9 @@ export default function Header() {
                                 <Link href="https://github.com/Chima20-art">
                                     <VscGithubInverted className="w-[24px] h-[24px] my-auto cursor-pointer" />
                                 </Link>
+                            </div>
+                            <div className="text-[13px] mx-auto  py-2">
+                                @copyright 2022
                             </div>
                         </motion.div>
                     </div>
