@@ -128,7 +128,7 @@ export default function Portfolio() {
                 })}
             </div>
 
-            <div className=" mx-auto flex flex-wrap gap-12  py-8 ">
+            <div className=" mx-auto h-fit flex flex-wrap gap-12  py-8 ">
                 {specificProjects?.map((item) => {
                     return (
                         <AnimatePresence mode="wait">
@@ -140,11 +140,11 @@ export default function Portfolio() {
                                 transition={{ duration: 0.3 }}
                                 onHoverStart={() => setHovered(true)}
                                 onHoverEnd={() => setHovered(false)}
-                                className="group relative md:w-[44%] w-full   cursor-pointer shadow-xl "
+                                className="group relative md:w-[44%] w-full h-fit cursor-pointer shadow-xl overflow-hidden "
                             >
                                 <img
                                     src={item.image}
-                                    className=" grayscale hover:grayscale-0  object-cover h-full  "
+                                    className=" grayscale hover:grayscale-0  object-cover w-full  "
                                 />
 
                                 <AnimatePresence>
