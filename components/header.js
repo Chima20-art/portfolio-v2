@@ -154,7 +154,7 @@ export default function Header() {
 
                             <div className="flex-1 flex flex-col items-center justify-center pt-4 gap-4 ">
                                 <img
-                                    src="/headshot.jpg"
+                                    src="/headShot.jpg"
                                     width="150px"
                                     height="150px"
                                     className="shadow-lg mx-auto"
