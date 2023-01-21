@@ -11,6 +11,7 @@ const Projects = [
         description: 'My personal website',
         categories: ['Nextjs'],
         url: 'https://github.com/Chima20-art/portfolio-v2',
+        link: '',
         image: '/portfolio.png',
     },
     {
@@ -140,7 +141,7 @@ export default function Portfolio() {
                                 transition={{ duration: 0.3 }}
                                 onHoverStart={() => setHovered(true)}
                                 onHoverEnd={() => setHovered(false)}
-                                className="group relative flex-[0_0_100%] flex items-stretch md:flex-[0_0_44%] max-h-[400px] column-gap-4  w-full   h-full  bg-red-300 cursor-pointer shadow-xl overflow-hidden "
+                                className="group relative flex-[0_0_100%] flex items-stretch md:flex-[0_0_44%] max-h-[400px] column-gap-4  w-full   h-full  bg-red-300 cursor-pointer shadow-xl overflow-hidden  "
                             >
                                 <div className="w-full h-[300px] bg-blue-300">
                                     <img
@@ -166,7 +167,7 @@ export default function Portfolio() {
                                                   }
                                                 : {}
                                         }
-                                        className="hidden  group-hover:flex group-hover:flex-col group-hover:shadow-md group-hover:absolute  group-hover:border-t group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:bg-white group-hover:z-5 group-hover:mx-auto"
+                                        className="hidden active:flex  group-hover:flex group-hover:flex-col group-hover:shadow-md group-hover:absolute  group-hover:border-t group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:bg-white group-hover:z-5 group-hover:mx-auto"
                                     >
                                         <div
                                             transition={{ duration: 1 }}
