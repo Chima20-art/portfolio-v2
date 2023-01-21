@@ -17,22 +17,35 @@ const Projects = [
     {
         title: 'Procktage',
         description: 'ecommerce website ',
-        categories: ['Sanity.io', 'Nextjs'],
+        categories: ['Nextjs'],
+        link: 'https://www.procktage.ma/',
+
         url: 'https://github.com/Chima20-art/procktage-frontend',
         image: '/procktage.png',
+    },
+    {
+        title: 'Procktage-sanity',
+        description: 'ecommerce website ',
+        categories: ['Sanity.io'],
+
+        link: 'https://procktage.sanity.studio',
+        url: 'https://github.com/Chima20-art/procktage',
+        image: '/sanity.png',
     },
     {
         title: 'The student forum',
         description: 'A digital university student forum ',
         categories: ['Nextjs'],
         url: 'https://github.com/Chima20-art/student-forum',
+        link: 'https://student-forum.vercel.app/forums',
         image: '/studentforum.png',
     },
     {
         title: 'Auto ecole alwafaa',
         description: 'driving school website ',
+        link: 'https://dri-school.vercel.app/',
         categories: ['Nextjs'],
-
+        link: 'https://dri-school.vercel.app/',
         url: 'https://github.com/Chima20-art/dri-school',
         image: '/autoecole.png',
     },
@@ -40,6 +53,7 @@ const Projects = [
         title: 'Association rabat kickboxing',
         description: 'Gym Management System ',
         categories: ['Nextjs'],
+        link: 'https://github.com/Chima20-art/gym-frontend',
         url: 'https://github.com/Chima20-art/gym-frontend',
         image: '/gym.png',
     },
@@ -47,6 +61,7 @@ const Projects = [
         title: 'Nordic Rose',
         description: 'Online blog ',
         categories: ['Nextjs', 'Sanity.io'],
+        link: 'https://chaimae-blog.vercel.app/',
         url: 'https://github.com/Chima20-art/blog-Next',
         image: '/blog.png',
     },
@@ -54,6 +69,7 @@ const Projects = [
         title: 'covid-19 map',
         description: 'confirmed Covid-19 cases around the world. ',
         categories: ['React'],
+        link: 'https://coronavirus-world-map-git-master-chima20-art.vercel.app/',
         url: 'https://github.com/Chima20-art/coronavirus-world-map',
         image: '/map.png',
     },
@@ -61,6 +77,7 @@ const Projects = [
         title: 'React web-app',
         description: 'DSI’s shared service solutions ',
         categories: ['React'],
+        link: 'https://community-chima20-art.vercel.app/',
         url: 'https://github.com/Chima20-art/community-website',
         image: '/community.png',
     },
@@ -174,7 +191,12 @@ export default function Portfolio() {
                                             className=" bg-white w-[100%]  p-2 mx-auto"
                                         >
                                             <div className="font-[600] flex justify-between">
-                                                <p>{item.title}</p>
+                                                <Link
+                                                    href={item.link}
+                                                    className="hover:underline active:underline "
+                                                >
+                                                    {item.title}
+                                                </Link>
                                                 <Link
                                                     href={item.url}
                                                     className="hovertext flex gap-1 "
