@@ -343,13 +343,13 @@ export default function About() {
                                             key={item.name}
                                             className="eduItem relative pl-5  flex   my-2  "
                                         >
-                                            <div className="min-w-[40%] mr-4 ">
-                                                <div className="bg-gray-200 rounded-full px-8 h-fit py-2 w-fit">
+                                            <div className=" mr-4 items-stretch   flex-1 max-w-[180px]  ">
+                                                <div className="bg-gray-200 rounded-full text-center h-fit py-2 ">
                                                     {item.year}
                                                 </div>
                                             </div>
-                                            <div className="flex flex-col ">
-                                                <div className="text-black font-[600] text-[14px] capitalize ">
+                                            <div className="flex flex-col flex-1 ">
+                                                <div className="text-black font-[600] text-[14px] capitalize w-full  ">
                                                     {item.name}
                                                 </div>
                                                 <div className="pt-1">
@@ -373,15 +373,15 @@ export default function About() {
                                     return (
                                         <div
                                             key={project.name}
-                                            className="eduItem relative pl-5  flex   my-2    "
+                                            className="eduItem relative pl-5  flex   my-2"
                                         >
-                                            <div className="min-w-[40%] mr-4 ">
-                                                <div className="bg-gray-200 rounded-full px-8 h-fit py-2 w-fit">
+                                            <div className="mr-4  items-stretch flex-1 max-w-[180px] ">
+                                                <div className="bg-gray-200 rounded-full  h-fit py-2 text-center ">
                                                     {project.year}
                                                 </div>
                                             </div>
 
-                                            <div className="flex flex-col  ">
+                                            <div className="flex flex-col flex-1  ">
                                                 <Link
                                                     href={project.url}
                                                     className="text-black font-[600] text-[16px] capitalize  hover:underline cursor-pointer"
