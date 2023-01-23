@@ -160,7 +160,7 @@ export default function Portfolio() {
                                 onHoverEnd={() => setHovered(false)}
                                 className="group relative flex-[0_0_100%] flex items-stretch md:flex-[0_0_44%] max-h-[400px] column-gap-4  w-full   h-full  bg-red-300 cursor-pointer shadow-xl overflow-hidden  "
                             >
-                                <div className="w-full h-[300px] bg-blue-300">
+                                <div className="w-full h-[300px] ">
                                     <img
                                         src={item.image}
                                         className=" grayscale hover:grayscale-0 flex-1 object-cover w-full h-full   "
