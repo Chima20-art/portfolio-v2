@@ -184,7 +184,7 @@ export default function Portfolio() {
                                                   }
                                                 : {}
                                         }
-                                        className="hidden active:flex  group-hover:flex group-hover:flex-col group-hover:shadow-md group-hover:absolute  group-hover:border-t group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:bg-white group-hover:z-5 group-hover:mx-auto"
+                                        className="hidden active:flex  group-hover:flex group-active:flex group-hover:flex-col group-hover:shadow-md group-hover:absolute  group-hover:border-t group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:bg-white group-hover:z-5 group-hover:mx-auto"
                                     >
                                         <div
                                             transition={{ duration: 1 }}
