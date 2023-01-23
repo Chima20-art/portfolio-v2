@@ -184,7 +184,12 @@ export default function Portfolio() {
                                                   }
                                                 : {}
                                         }
-                                        className="hidden active:flex  group-hover:flex group-active:flex group-hover:flex-col group-hover:shadow-md group-hover:absolute  group-hover:border-t group-hover:bottom-0 group-hover:left-0 group-hover:w-full group-hover:bg-white group-hover:z-5 group-hover:mx-auto"
+                                        whileInView={{
+                                            opacity: 1,
+                                            scale: 1,
+                                            y: '0%',
+                                        }}
+                                        className="lg:hidden max-lg:flex active:flex  group-hover:flex group-active:flex flex-col shadow-md absolute  border-t bottom-0 left-0 w-full bg-white z-5 mx-auto"
                                     >
                                         <div
                                             transition={{ duration: 1 }}
