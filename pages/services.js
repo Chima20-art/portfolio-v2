@@ -55,9 +55,27 @@ export default function Services() {
             <div className="mx-auto flex flex-wrap gap-12 justify-around  py-8">
                 {Service.map((item) => {
                     return (
-                        <div className="group border border-gray-300  cursor-pointer hover:bg-[#333333] py-12 items-center align-center flex flex-col md:w-[44%]   w-full ">
-                            <item.Icon className="w-[60px] h-[60px] group-hover:text-white" />
-                            <h3 className="font-[500] w-[95%] text-center text-[24px] text-[#333] group-hover:text-white my-4">
+                        <div
+                            className={
+                                Service.indexOf(item) % 2 !== 0
+                                    ? 'group border border-gray-300  cursor-pointer md:hover:bg-[#333333] py-12 items-center align-center flex flex-col md:w-[44%]   w-full '
+                                    : 'group border border-gray-300  cursor-pointer   max-sm:bg-[#333333] md:hover:bg-[#333333] py-12 items-center align-center flex flex-col md:w-[44%]   w-full'
+                            }
+                        >
+                            <item.Icon
+                                className={
+                                    Service.indexOf(item) % 2 !== 0
+                                        ? 'w-[60px] h-[60px] md:group-hover:text-white  text-[#333333] '
+                                        : 'w-[60px] h-[60px] md:group-hover:text-white max-sm:text-white   '
+                                }
+                            />
+                            <h3
+                                className={
+                                    Service.indexOf(item) % 2 !== 0
+                                        ? 'font-[500] w-[95%] text-center text-[24px] text-[#333] md:group-hover:text-white  text-[#333333] my-4'
+                                        : 'font-[500] w-[95%] text-center text-[24px] text-[#333] md:group-hover:text-white  max-sm:text-white my-4'
+                                }
+                            >
                                 {' '}
                                 {item.title}
                             </h3>
