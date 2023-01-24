@@ -1,11 +1,9 @@
 import Header from '../components/header'
 import Footer from '../components/footer'
-import Home from '.'
 import '../styles/globals.css'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import Loading from '../components/loading'
-import { NextSeo } from 'next-seo'
 
 import { DefaultSeo } from 'next-seo'
 

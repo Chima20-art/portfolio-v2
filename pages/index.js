@@ -1,9 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Header from '../components/header'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import Footer from '../components/footer'
 import Link from 'next/link'
 
 export default function Home() {

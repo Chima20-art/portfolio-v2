@@ -1,8 +1,6 @@
-import react from 'react'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AiFillGithub } from 'react-icons/ai'
-import { TbExternalLink } from 'react-icons/tb'
 import Link from 'next/link'
 
 const Projects = [
