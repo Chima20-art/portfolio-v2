@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AiFillGithub } from 'react-icons/ai'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Projects = [
     {
@@ -160,9 +161,11 @@ export default function Portfolio() {
                                 cursor-pointer shadow-xl overflow-hidden  "
                             >
                                 <div className="w-full h-[300px] ">
-                                    <img
+                                    <Image
+                                        width={396}
+                                        height={300}
                                         src={item.image}
-                                        className=" grayscale hover:grayscale-0 flex-1 object-cover w-full h-full   "
+                                        className="w-full h-full  grayscale hover:grayscale-0 flex-1 object-cover w-full h-full   "
                                     />
                                 </div>
 
