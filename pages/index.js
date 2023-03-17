@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 export default function Home() {
-    const [showButton, setShowButton] = useState(false)
     const [headlines, setHeadlines] = useState([
         {
             title: 'Developer',
@@ -30,7 +29,7 @@ export default function Home() {
     }, [selectedHeadline])
 
     return (
-        <div className="w-full h-full items-center  text-grey flex ">
+        <div className="w-[85%] mx-auto h-full items-center  text-grey flex ">
             <div className="w-full  flex align-center my-auto ">
                 <div className="flex flex-col justify-center ">
                     <p className="uppercase text-[42px] font-[700] leading-[66px] py-4">

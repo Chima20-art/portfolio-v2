@@ -45,7 +45,7 @@ const Service = [
 
 export default function Services() {
     return (
-        <div className=" h-fit  w-full mx-auto  pt-12  ">
+        <div className=" h-fit w-[85%]  mx-auto  pt-12  ">
             <div className="flex  items-center py-8  ">
                 <p className="text-grey font-[700] uppercase tracking-[7px] mr-6  text-[18px]">
                     Services

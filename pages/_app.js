@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import Loading from '../components/loading'
 
 import { DefaultSeo } from 'next-seo'
+import Image from 'next/image'
 
 function MyApp({ Component, pageProps, router }) {
     const [loading, setLoading] = useState(true)
@@ -30,24 +31,26 @@ function MyApp({ Component, pageProps, router }) {
                     ],
                 }}
             />
-            <div className="w-screen px-[4%]  mx-auto w-full h-screen mx-auto flex flex-col scrollbar-hide  text-grey ">
+            <div className="w-screen px-[4%] mx-auto w-full h-screen mx-auto flex flex-col scrollbar-hide  text-grey ">
                 {loading && <Loading />}
 
                 <Header />
 
-                <div className="w-full   flex flex-1 h-[calc(100vh_-_112px)]  justify-start gap-12 scrollbar-hide ">
-                    <div className="hidden lg:flex  max-w-[50%]">
-                        <img
+                <div className="w-full flex flex-1 h-[calc(100vh_-_112px)]  justify-start  object-contain scrollbar-hide ">
+                    <div className=" xl:flex hidden  w-[40%]">
+                        <Image
+                            height={600}
+                            width={550}
                             src="/headShot.jpg"
                             alt="main Img"
-                            className=" w-fit lg:w-[400px] xl:w-fit    object-contain lg:object-cover xl:object-contain h-full rounded drop-shadow-2xl "
+                            className=" w-fit xl:w-full  lg:my-auto object-contain h-full rounded drop-shadow-2xl "
                         />
                     </div>
 
                     <AnimatePresence mode="wait" initial={false}>
                         <motion.div
                             key={router.asPath}
-                            className="w-full flex-1  overflow-scroll scrollbar-hide	  "
+                            className="w-full flex-1 overflow-scroll scrollbar-hide"
                             style={{
                                 originX: '0%',
                                 originY: '50%',

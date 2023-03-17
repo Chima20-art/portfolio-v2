@@ -74,8 +74,8 @@ const projects = [
 
 export default function About() {
     return (
-        <div className="w-full  text-grey   flex flex-col justify-between">
-            <div className="w-full  flex ">
+        <div className="w-[85%] mx-auto  text-grey   flex flex-col justify-between">
+            <div className="w-full flex ">
                 <div className="flex flex-col ">
                     <div className="flex flex-col   w-full pt-20  h-fit">
                         <div className="flex w-full items-center mb-6  ">
@@ -84,7 +84,7 @@ export default function About() {
                             </p>
                             <span className="bg-grey  w-full flex-1 h-[1px]" />
                         </div>
-                        <div className="flex flex-col xl:flex-row gap-8  w-full justify-between  h-fit ">
+                        <div className="flex flex-col lg:flex-row gap-8  w-full justify-between  h-fit ">
                             <div className=" flex-1 text-lightGrey text-[13px] tracking-normal font-normal   leading-6 ">
                                 <p className="my-4">
                                     Hello there! My name is{' '}
@@ -169,7 +169,7 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col xl:flex-row w-full gap-8 pt-24  h-fit justify-between ">
+                    <div className="flex flex-col lg:flex-row w-full gap-8 pt-24  h-fit justify-between ">
                         <div className="flex-1 flex flex-col">
                             <div className="flex w-full items-center mb-6   ">
                                 <p className="text-grey font-[700] text-[14px] uppercase tracking-[7px] mr-6 ">
@@ -233,7 +233,7 @@ export default function About() {
                             </ul>
                         </div>
                     </div>
-                    <div className="flex flex-col xl:flex-row w-full gap-8 pt-24  h-fit justify-between ">
+                    <div className="flex flex-col lg:flex-row w-full gap-8 pt-24  h-fit justify-between ">
                         <div className="flex-1 flex flex-col">
                             <div className="flex w-full items-center mb-6   ">
                                 <p className="text-grey font-[700] text-[14px] uppercase tracking-[7px] mr-6 ">
@@ -326,7 +326,7 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col xl:flex-row w-full gap-8 pt-24  h-fit justify-between ">
+                    <div className="flex flex-col lg:flex-row w-full gap-8 pt-24  h-fit justify-between ">
                         <div className="flex-1 flex flex-col">
                             <div className="flex w-full items-center mb-6   ">
                                 <p className="text-grey font-[700] text-[14px] uppercase tracking-[7px] mr-6 ">

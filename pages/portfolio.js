@@ -163,7 +163,7 @@ export default function Portfolio() {
                                 <div className="w-full h-[300px] ">
                                     <Image
                                         width={396}
-                                        height={300}
+                                        height={396}
                                         src={item.image}
                                         className="w-full h-full  grayscale hover:grayscale-0 flex-1 object-cover w-full h-full   "
                                     />
