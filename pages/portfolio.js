@@ -187,31 +187,9 @@ export default function Portfolio() {
                 <AnimatePresence>
                   <motion.div
                     key={item?.description}
-                    initial={{
-                      opacity: 0,
-                      //scale: 0.1,
-                      y: "100%",
-                    }}
-                    animate={
-                      hovered
-                        ? {
-                            opacity: 1,
-                            scale: 1,
-                            y: "0%",
-                          }
-                        : {}
-                    }
-                    whileInView={{
-                      opacity: 1,
-                      scale: 1,
-                      y: "0%",
-                    }}
-                    className="lg:hidden max-lg:flex active:flex  group-hover:flex group-active:flex flex-col shadow-md absolute  border-t bottom-0 left-0 w-full bg-white z-5 mx-auto"
+                    className=" max-lg:flex active:flex  group-hover:flex group-active:flex flex-col shadow-md absolute  border-t bottom-0 left-0 w-full  z-5 mx-auto"
                   >
-                    <div
-                      transition={{ duration: 1 }}
-                      className=" bg-white w-[100%]  p-2 mx-auto"
-                    >
+                    <div className=" bg-white w-[100%]   p-2 mx-auto">
                       <div className="font-[600] flex justify-between">
                         <Link
                           href={item.link}
