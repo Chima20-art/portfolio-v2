@@ -8,6 +8,7 @@ import Loading from "../components/loading";
 import { DefaultSeo } from "next-seo";
 import Image from "next/image";
 import GoogleAnalytics from "../components/googleAnalytics";
+import CookiePopUp from "../components/cookiePopUp";
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(true);
@@ -42,7 +43,8 @@ function MyApp({ Component, pageProps, router }) {
 
         <Header />
 
-        <div className="w-full flex flex-1 h-[calc(100vh_-_112px)]  justify-start  object-contain scrollbar-hide ">
+        <div className=" relative w-full flex flex-1 h-[calc(100vh_-_112px)]  justify-start  object-contain scrollbar-hide ">
+          <CookiePopUp />
           <div className=" xl:flex hidden  w-[40%]">
             <Image
               height={600}
