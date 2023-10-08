@@ -32,13 +32,14 @@ function MyApp({ Component, pageProps, router }) {
     console.log(JSON.stringify(cookies));
     let cookiesKeys = Object.keys(cookies);
     cookiesKeys.forEach((key) => {
-      console.log("dealing with cookie ", key);
-      if (ANALYTICS_COOKIES.includes(key) && acceptedCookies == "essential") {
-        console.log("removed cookie");
-        removeCookie(key);
-      } else {
-        console.log("keeping cookie");
-      }
+      // console.log("dealing with cookie ", key);
+      // if (ANALYTICS_COOKIES.includes(key) && acceptedCookies == "essential") {
+      //   console.log("removed cookie");
+      //   removeCookie(key);
+      // } else {
+      //   console.log("keeping cookie");
+      // }
+      console.log("cookie domain ", cookies.get(key, { path: "/" }).domain);
     });
 
     //console.log(" ");
