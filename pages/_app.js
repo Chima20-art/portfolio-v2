@@ -12,7 +12,7 @@ import CookiePopUp from "../components/cookiePopUp";
 import { CookiesProvider, useCookies } from "react-cookie";
 import HotJar from "../components/hotJar";
 
-const HOTJAR_COOKIES = ["XDOMAIN-LOGGED-IN", ""];
+const ANALYTICS_COOKIES = ["XDOMAIN-LOGGED-IN"];
 const ESSENTIAL_COOKIES = ["user-id"];
 
 function MyApp({ Component, pageProps, router }) {
@@ -28,23 +28,6 @@ function MyApp({ Component, pageProps, router }) {
   };
 
   useEffect(() => {
-    console.log("cookies ");
-    console.log(JSON.stringify(cookies));
-    let cookiesKeys = Object.keys(cookies);
-    cookiesKeys.forEach((key) => {
-      // console.log("dealing with cookie ", key);
-      // if (ANALYTICS_COOKIES.includes(key) && acceptedCookies == "essential") {
-      //   console.log("removed cookie");
-      //   removeCookie(key);
-      // } else {
-      //   console.log("keeping cookie");
-      // }
-    });
-
-    if (typeof window != "undefined") {
-      console.log("document.cookie ", document.cookie);
-    }
-
     //console.log(" ");
   }, [cookies, acceptedCookies]);
 
@@ -86,9 +69,10 @@ function MyApp({ Component, pageProps, router }) {
           ],
         }}
       />
-      <HotJar />
-      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS &&
-      (acceptedCookies == "all" || acceptedCookies == "analytics") ? (
+      {(acceptedCookies == "all" || acceptedCookies == "analytics") && (
+        <HotJar />
+      )}
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
         <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
       ) : null}
       <div className="w-screen px-[4%] w-full h-screen mx-auto flex flex-col scrollbar-hide  text-grey ">
