@@ -63,7 +63,7 @@ export default function CookiePopUp({ setAcceptedCookies }) {
               </label>
             </div>
             <div className="flex flex-row w-full justify-between">
-              <div>Analytics</div>
+              <div>Hotjar</div>
               <label className="relative inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
