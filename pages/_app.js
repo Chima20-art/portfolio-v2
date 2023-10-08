@@ -10,7 +10,7 @@ import Image from "next/image";
 import GoogleAnalytics from "../components/googleAnalytics";
 import CookiePopUp from "../components/cookiePopUp";
 import { CookiesProvider, useCookies } from "react-cookie";
-import HotJar from "../components/hotJar";
+import useHotjar from "react-use-hotjar";
 
 const ANALYTICS_COOKIES = ["XDOMAIN-LOGGED-IN"];
 const ESSENTIAL_COOKIES = ["user-id"];
@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps, router }) {
   const [cookies, setCookie, removeCookie] = useCookies(["cookie-name"]);
   const [acceptedCookies, setAcceptedCookies] = useState("essential"); // eithe or essential 'analytics' or 'all'
   const [hideBanenr, setHideBanner] = useState(false);
+  const { initHotjar } = useHotjar();
 
   const setCookiePolicy = (value) => {
     setAcceptedCookies(value);
@@ -29,7 +30,11 @@ function MyApp({ Component, pageProps, router }) {
 
   useEffect(() => {
     //console.log(" ");
-  }, [cookies, acceptedCookies]);
+    if (acceptedCookies != "essential") {
+      console.log("hotjar added ");
+      initHotjar(3685592, 6);
+    }
+  }, [acceptedCookies]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -69,9 +74,6 @@ function MyApp({ Component, pageProps, router }) {
           ],
         }}
       />
-      {(acceptedCookies == "all" || acceptedCookies == "analytics") && (
-        <HotJar />
-      )}
       {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
         <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
       ) : null}
