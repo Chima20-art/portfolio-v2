@@ -12,7 +12,7 @@ import CookiePopUp from "../components/cookiePopUp";
 import { CookiesProvider, useCookies } from "react-cookie";
 import HotJar from "../components/hotJar";
 
-const ANALYTICS_COOKIES = ["_ga", "1P_JAR", "_ga_R7JKCQTMRS"];
+const HOTJAR_COOKIES = ["XDOMAIN-LOGGED-IN", ""];
 const ESSENTIAL_COOKIES = ["user-id"];
 
 function MyApp({ Component, pageProps, router }) {
@@ -39,8 +39,11 @@ function MyApp({ Component, pageProps, router }) {
       // } else {
       //   console.log("keeping cookie");
       // }
-      console.log("cookie domain ", cookies.get(key, { path: "/" }).domain);
     });
+
+    if (typeof window != "undefined") {
+      console.log("document.cookie ", document.cookie);
+    }
 
     //console.log(" ");
   }, [cookies, acceptedCookies]);
@@ -94,11 +97,10 @@ function MyApp({ Component, pageProps, router }) {
         <Header />
 
         <div className=" relative w-full flex flex-1 h-[calc(100vh_-_112px)]  justify-start  object-contain scrollbar-hide ">
-          <CookiesProvider>
-            {!hideBanenr && !loading && (
-              <CookiePopUp setAcceptedCookies={setCookiePolicy} />
-            )}
-          </CookiesProvider>
+          {!hideBanenr && !loading && (
+            <CookiePopUp setAcceptedCookies={setCookiePolicy} />
+          )}
+
           <div className=" xl:flex hidden  w-[40%]">
             <Image
               height={600}
