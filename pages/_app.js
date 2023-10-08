@@ -9,7 +9,8 @@ import { DefaultSeo } from "next-seo";
 import Image from "next/image";
 import GoogleAnalytics from "../components/googleAnalytics";
 import CookiePopUp from "../components/cookiePopUp";
-import { useCookies } from "react-cookie";
+import { CookiesProvider, useCookies } from "react-cookie";
+import HotJar from "../components/hotJar";
 
 const ANALYTICS_COOKIES = ["_ga", "1P_JAR", "_ga_R7JKCQTMRS"];
 const ESSENTIAL_COOKIES = ["user-id"];
@@ -47,7 +48,9 @@ function MyApp({ Component, pageProps, router }) {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
+
     setCookie("user-id", "user-41");
+
     let pressiedCookie = localStorage.getItem("acceptedCookies");
     if (
       ["all", "essential", "analytics"].includes(pressiedCookie) &&
@@ -79,6 +82,7 @@ function MyApp({ Component, pageProps, router }) {
           ],
         }}
       />
+      <HotJar />
       {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS &&
       (acceptedCookies == "all" || acceptedCookies == "analytics") ? (
         <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
@@ -89,9 +93,11 @@ function MyApp({ Component, pageProps, router }) {
         <Header />
 
         <div className=" relative w-full flex flex-1 h-[calc(100vh_-_112px)]  justify-start  object-contain scrollbar-hide ">
-          {!hideBanenr && !loading && (
-            <CookiePopUp setAcceptedCookies={setCookiePolicy} />
-          )}
+          <CookiesProvider>
+            {!hideBanenr && !loading && (
+              <CookiePopUp setAcceptedCookies={setCookiePolicy} />
+            )}
+          </CookiesProvider>
           <div className=" xl:flex hidden  w-[40%]">
             <Image
               height={600}
