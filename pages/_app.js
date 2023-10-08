@@ -33,14 +33,15 @@ function MyApp({ Component, pageProps, router }) {
     cookiesKeys.forEach((key) => {
       console.log("dealing with cookie ", key);
       if (ANALYTICS_COOKIES.includes(key) && acceptedCookies == "essential") {
-        console.log("removed cookie");
+        //console.log("removed cookie");
         removeCookie(key);
       } else {
-        console.log("keeping cookie");
+        // console.log("keeping cookie");
       }
     });
-    console.log(" ");
-  }, [cookies]);
+
+    //console.log(" ");
+  }, [cookies, acceptedCookies]);
 
   useEffect(() => {
     setTimeout(() => {
