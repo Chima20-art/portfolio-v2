@@ -10,7 +10,7 @@ const Projects = [
     description: "ecommerce website ",
     categories: ["Nextjs"],
     url: "https://github.com/Chima20-art/procktage-frontend",
-    link: "https://www.procktage.ma/",
+    link: "https://procktage-frontend.vercel.app/",
     image: "/procktage.png",
   },
   {

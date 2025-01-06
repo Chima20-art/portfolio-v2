@@ -78,11 +78,11 @@ const projects = [
 
 export default function About() {
     return (
-        <div className="w-[85%] mx-auto  text-grey   flex flex-col justify-between">
+        <div className="w-[85%] mx-auto  text-grey  flex flex-col justify-between">
             <div className="w-full flex ">
                 <div className="flex flex-col ">
-                    <div className="flex flex-col   w-full pt-20  h-fit">
-                        <div className="flex w-full items-center mb-6  ">
+                    <div className="flex flex-col w-full md:pt-20 pt-10  h-fit">
+                        <div className="flex w-full items-center md:mb-6 ">
                             <p className="text-grey font-[700] uppercase tracking-[7px] mr-6  text-[14px]">
                                 About me
                             </p>

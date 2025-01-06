@@ -26,7 +26,7 @@ export default function Home() {
                     </div>
                     <Link
                         href="/about"
-                        className="py-[14px] px-[26px] bg-grey text-white w-fit cursor-pointer font-[500] text-[16px] border-grey border-[2px] hover:bg-white hover:text-grey rounded"
+                        className="py-[14px] px-[26px] bg-grey text-white w-fit cursor-pointer font-[500] text-[16px] border-grey border-[2px] hover:bg-white hover:text-grey rounded mt-4"
                     >
                         Learn more
                     </Link>

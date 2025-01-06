@@ -1,9 +1,12 @@
+'use client'
+
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaLinkedin } from 'react-icons/fa'
 import { RiInstagramFill } from 'react-icons/ri'
 import { VscGithubInverted } from 'react-icons/vsc'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
     const pages = [
@@ -13,78 +16,78 @@ export default function Header() {
         { title: 'Services', url: '/services' },
         { title: 'Contact', url: '/contact' },
     ]
-    const [hoverdItem, setHoveredItem] = useState('')
+    const [hoveredItem, setHoveredItem] = useState('')
+    const [selectedItem, setSelectedItem] = useState('Home')
     const [showMobileMenu, setShowMobileMenu] = useState(false)
+    const pathname = usePathname()
+
+    useEffect(() => {
+        const currentPage = pages.find(page => page.url === pathname)
+        if (currentPage) {
+            setSelectedItem(currentPage.title)
+        }
+    }, [pathname])
+
+    const handlePageClick = (title) => {
+        setSelectedItem(title)
+        setShowMobileMenu(false)
+    }
 
     return (
         <>
-            <div className="flex h-14 py-4 items-center justify-between font-medium ">
+            <div className="flex h-14 py-4 items-center justify-between font-medium">
                 <Link
                     href="/"
-                    className="  uppercase font-bold text-[18px] text-black hover:scale-110 "
+                    className="uppercase font-bold text-[18px] text-black hover:scale-110"
                 >
                     Michich
                 </Link>
-                <div className=" lg:flex  text-grey text-sm hidden ">
-                    {pages?.map((page) => {
-                        return (
-                            <Link href={page.url} key={page.title}>
-                                {' '}
-                                <div
-                                    onMouseEnter={() =>
-                                        setHoveredItem(page.title)
-                                    }
-                                    onMouseLeave={() => setHoveredItem('')}
-                                    className=" relative  hover:cursor-pointer  overflow-hidden  text-grey  px-[17px] py-[9px]  font-medium   "
+                <div className="lg:flex text-grey text-sm hidden">
+                    {pages?.map((page) => (
+                        <Link href={page.url} key={page.title} onClick={() => handlePageClick(page.title)}>
+                            <div
+                                onMouseEnter={() => setHoveredItem(page.title)}
+                                onMouseLeave={() => setHoveredItem('')}
+                                className={`relative hover:cursor-pointer overflow-hidden px-[17px] py-[9px] font-medium ${
+                                    selectedItem === page.title ? 'text-white bg-grey' : 'text-grey'
+                                }`}
+                            >
+                                <motion.div
+                                    initial={{ x: '-105%' }}
+                                    animate={{
+                                        x: hoveredItem === page.title || selectedItem === page.title ? '0%' : '-105%',
+                                    }}
+                                    transition={{
+                                        duration: 0.4,
+                                        delay: 0.2,
+                                        ease: 'easeIn',
+                                    }}
+                                    className="bg-grey h-full w-full flex align-center items-center absolute right-0 top-0 z-20"
                                 >
-                                    <motion.div
-                                        initial={{
-                                            x: '-105%',
-                                        }}
-                                        animate={
-                                            hoverdItem == page.title
-                                                ? {
-                                                      x: '0%',
-                                                  }
-                                                : { x: '-105%' }
-                                        }
-                                        transition={{
-                                            duration: 0.4,
-                                            delay: 0.2,
-                                            ease: 'easeIn',
-                                        }}
-                                        className="bg-grey h-full w-full flex align-center items-center absolute right-0 top-0 z-20  "
-                                    >
-                                        <p className=" z-[20] text-white w-fit h-fit flex justify-center items-center  mx-auto h-full bg-transparent">
-                                            {page.title}
-                                        </p>
-                                    </motion.div>
-                                    <motion.p
-                                        animate={
-                                            hoverdItem == page.title
-                                                ? { x: '-105%' }
-                                                : { x: '0%' }
-                                        }
-                                        transition={{
-                                            duration:
-                                                hoverdItem == page.title
-                                                    ? 0.2
-                                                    : 0.4,
-                                            delay: 0.2,
-                                            ease: 'easeIn',
-                                        }}
-                                        className="  z-[10] w-full h-full   mx-auto h-full bg-transparent  "
-                                    >
+                                    <p className="z-[20] text-white w-fit h-fit flex justify-center items-center mx-auto h-full bg-transparent">
                                         {page.title}
-                                    </motion.p>
-                                </div>
-                            </Link>
-                        )
-                    })}
+                                    </p>
+                                </motion.div>
+                                <motion.p
+                                    animate={{
+                                        x: hoveredItem === page.title || selectedItem === page.title ? '-105%' : '0%',
+                                    }}
+                                    transition={{
+                                        duration: hoveredItem === page.title ? 0.2 : 0.4,
+                                        delay: 0.2,
+                                        ease: 'easeIn',
+                                    }}
+                                    className="z-[10] w-full h-full mx-auto h-full bg-transparent"
+                                >
+                                    {page.title}
+                                </motion.p>
+                            </div>
+                        </Link>
+                    ))}
                 </div>
                 <div
                     onClick={() => setShowMobileMenu(true)}
-                    className="flex  lg:hidden  "
+                    className="flex lg:hidden"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +108,7 @@ export default function Header() {
 
             <AnimatePresence>
                 {showMobileMenu && (
-                    <div className="bg-red-700 ">
+                    <div className="bg-red-700">
                         <motion.div
                             initial={{
                                 x: '100%',
@@ -122,18 +125,18 @@ export default function Header() {
                             transition={{
                                 duration: 0.8,
                             }}
-                            className="px-[4%]  w-full bg-white h-screen align-right fixed flex flex-col z-50 top-0 left-0 "
+                            className="px-[4%] w-full bg-white h-screen align-right fixed flex flex-col z-50 top-0 left-0"
                         >
-                            <div className="flex h-14 py-4   items-center justify-between font-medium ">
+                            <div className="flex h-14 py-4 items-center justify-between font-medium">
                                 <Link
                                     href="/"
-                                    className="  uppercase font-bold  text-[18px] text-black hover:scale-110 "
+                                    className="uppercase font-bold text-[18px] text-black hover:scale-110"
                                 >
                                     Michich
                                 </Link>
                                 <div
                                     onClick={() => setShowMobileMenu(false)}
-                                    className="flex lg:hidden  "
+                                    className="flex lg:hidden"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -152,34 +155,31 @@ export default function Header() {
                                 </div>
                             </div>
 
-                            <div className="flex-1 flex flex-col items-center justify-center pt-4 gap-4 ">
+                            <div className="flex-1 flex flex-col items-center justify-center pt-4 gap-4">
                                 <img
                                     src="/headShot.jpg"
-                                    width="150px"
-                                    height="150px"
+                                    width="150"
+                                    height="150"
                                     className="shadow-lg mx-auto"
+                                    alt="Profile"
                                 />
-                                {pages?.map((item) => {
-                                    return (
-                                        <Link
-                                            onClick={() =>
-                                                setShowMobileMenu(false)
-                                            }
-                                            href={item.url}
-                                            className=" text-2xl min-w-[30vw] text-center hover:underline hover:font-bold"
-                                            key={item?.title}
-                                        >
-                                            {item?.title}
-                                        </Link>
-                                    )
-                                })}
+                                {pages?.map((item) => (
+                                    <Link
+                                        onClick={() => handlePageClick(item.title)}
+                                        href={item.url}
+                                        className={`text-2xl min-w-[30vw] text-center hover:underline ${
+                                            selectedItem === item.title ? 'font-bold underline' : ''
+                                        }`}
+                                        key={item?.title}
+                                    >
+                                        {item?.title}
+                                    </Link>
+                                ))}
                             </div>
-                            <div className="flex justify-center align-center text-black py-4 ">
+                            <div className="flex justify-center align-center text-black py-4">
                                 <Link href="https://www.instagram.com/minan_sha/">
-                                    {' '}
-                                    <RiInstagramFill className="w-[24px] h-[24px] my-auto mr-2 cursor-pointer " />
+                                    <RiInstagramFill className="w-[24px] h-[24px] my-auto mr-2 cursor-pointer" />
                                 </Link>
-
                                 <Link href="https://www.linkedin.com/in/chaimae-michich-0bb9a11a1/">
                                     <FaLinkedin className="w-[24px] h-[24px] my-auto mr-2 cursor-pointer" />
                                 </Link>
@@ -187,7 +187,7 @@ export default function Header() {
                                     <VscGithubInverted className="w-[24px] h-[24px] my-auto cursor-pointer" />
                                 </Link>
                             </div>
-                            <div className="text-[13px] mx-auto  py-2">
+                            <div className="text-[13px] mx-auto py-2">
                                 @copyright 2022
                             </div>
                         </motion.div>
@@ -197,3 +197,4 @@ export default function Header() {
         </>
     )
 }
+
