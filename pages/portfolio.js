@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
@@ -9,9 +9,17 @@ const Projects = [
     title: "Procktage",
     description: "ecommerce website ",
     categories: ["Nextjs"],
-    link: "https://www.procktage.ma/",
     url: "https://github.com/Chima20-art/procktage-frontend",
+    link: "https://www.procktage.ma/",
     image: "/procktage.png",
+  },
+  {
+    title: "SuperbFragrances",
+    description: "Fragrances online shop",
+    categories: ["Nextjs"],
+    link: "https://www.superbfragrance.ma/",
+    url: "https://github.com/Chima20-art/fragrances",
+    image: "/fragrances.png",
   },
   {
     title: "Wordle",
@@ -25,8 +33,8 @@ const Projects = [
     title: "Nordic Rose",
     description: "Online blog ",
     categories: ["Nextjs", "Sanity.io"],
-    link: "https://chaimae-blog.vercel.app/",
     url: "https://github.com/Chima20-art/blog-Next",
+    link: "https://chaimae-blog.vercel.app/",
     image: "/blog.png",
   },
   {
@@ -37,7 +45,6 @@ const Projects = [
     link: "https://halo-test.vercel.app/",
     image: "/rootz.png",
   },
-
   {
     title: "DM",
     description: "A car rental-frienidly UI ",
@@ -50,7 +57,6 @@ const Projects = [
   {
     title: "Auto ecole Alwafaa",
     description: "driving school website ",
-    link: "https://dri-school.vercel.app/",
     categories: ["Nextjs"],
     link: "https://dri-school.vercel.app/",
     url: "https://github.com/Chima20-art/dri-school",
@@ -100,122 +106,99 @@ const Projects = [
 ];
 
 export default function Portfolio() {
-  const [hovered, setHovered] = useState(false);
-  var buttons = [];
+  const [isClient, setIsClient] = useState(false);
   const [category, setCategory] = useState("");
   const [clicked, setClicked] = useState("All");
 
-  Projects.forEach((project) => {
-    project.categories.forEach((category) => {
-      if (!buttons.includes(category)) {
-        buttons.push(category);
-      }
-    });
-  });
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
-  var specificProjects =
-    category != ""
-      ? Projects.filter((item) => {
-          return item?.categories?.includes(category);
-        })
+  const buttons = [...new Set(Projects.flatMap(project => project.categories))];
+
+  const specificProjects = category
+      ? Projects.filter(item => item.categories.includes(category))
       : Projects;
-  console.log(category);
+
+  if (!isClient) {
+    return null; // or a loading spinner
+  }
 
   return (
-    <div className=" h-screen w-[85%] mx-auto  pt-12 ">
-      <div className="flex  items-center py-8  ">
-        <p className="text-grey font-[700] uppercase tracking-[7px] mr-6  text-[18px]">
-          PORTFOLIO
-        </p>
-        <span className="bg-grey  w-full flex-1 h-[1px]" />
-      </div>
-      <div className="flex gap-4">
-        <div
-          className={
-            clicked == "All" ? "font-[600] cursor-pointer" : "cursor-pointer"
-          }
-          onClick={() => {
-            setCategory("");
-            setClicked("All");
-          }}
-        >
-          All
+      <div className="min-h-screen w-[85%] mx-auto pt-12">
+        <div className="flex items-center py-8">
+          <p className="text-grey font-[700] uppercase tracking-[7px] mr-6 text-[18px]">
+            PORTFOLIO
+          </p>
+          <span className="bg-grey w-full flex-1 h-[1px]" />
         </div>
-        {buttons.map((button) => {
-          return (
-            <div
+        <div className="flex gap-4 mb-8">
+          <button
+              className={clicked === "All" ? "font-[600]" : ""}
               onClick={() => {
-                setCategory(button);
-                setClicked(button);
+                setCategory("");
+                setClicked("All");
               }}
-              className={
-                clicked == button
-                  ? "font-[600] cursor-pointer"
-                  : "cursor-pointer"
-              }
-            >
-              {button}
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="w-full mx-auto h-fit flex justify-between  items-stretch footer flex-wrap gap-12  py-8">
-        {specificProjects?.map((item) => {
-          return (
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={item?.title}
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.5 }}
-                transition={{ duration: 0.3 }}
-                onHoverStart={() => setHovered(true)}
-                onHoverEnd={() => setHovered(false)}
-                className="group relative flex-[0_0_100%] flex items-stretch md:flex-[0_0_44%] max-h-[400px] column-gap-4  w-full   h-full  
-                                cursor-pointer shadow-xl overflow-hidden  "
+          >
+            All
+          </button>
+          {buttons.map((button) => (
+              <button
+                  key={button}
+                  onClick={() => {
+                    setCategory(button);
+                    setClicked(button);
+                  }}
+                  className={clicked === button ? "font-[600]" : ""}
               >
-                <div className="w-full h-[300px] ">
-                  <Image
-                    width={396}
-                    height={396}
-                    src={item.image}
-                    className=" grayscale-0 hover:grayscale-0 flex-1 object-cover w-full h-full   "
-                  />
-                </div>
+                {button}
+              </button>
+          ))}
+        </div>
 
-                <AnimatePresence>
-                  <motion.div
-                    key={item?.description}
-                    className=" max-lg:flex active:flex  group-hover:flex group-active:flex flex-col shadow-md absolute  border-t bottom-0 left-0 w-full  z-5 mx-auto"
-                  >
-                    <div className=" bg-white w-[100%]   p-2 mx-auto">
-                      <div className="font-[600] flex justify-between">
-                        <Link
-                          href={item.link}
-                          className="hover:underline active:underline "
-                        >
-                          {item.title}
-                        </Link>
-                        <Link
-                          href={item.url}
-                          className="hovertext flex gap-1 "
-                          data-hover=" //github link"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {specificProjects.map((item) => (
+              <AnimatePresence mode="wait" key={item.title}>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.5 }}
+                    transition={{ duration: 0.3 }}
+                    className="group relative flex flex-col min-h-[350px] shadow-xl overflow-hidden"
+                >
+                  <Link href={item.link} className="w-full h-full">
+                    <div className="w-full h-[300px]">
+                      <Image
+                          width={396}
+                          height={396}
+                          src={item.image}
+                          alt={item.title}
+                          className="object-cover w-full h-full"
+                      />
+                    </div>
+
+                    <div className="absolute bottom-0 left-0 w-full bg-white p-4">
+                      <div className="font-[600] flex justify-between items-center">
+                        <span className="hover:underline">{item.title}</span>
+                        <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1"
+                            onClick={(e) => e.stopPropagation()}
                         >
                           <AiFillGithub className="text-2xl" />
-                        </Link>
+                        </a>
                       </div>
-                      <p className="text-[12px] text-gray-400">
-                        {item.description}
-                      </p>
+                      <p className="text-sm text-gray-600">{item.description}</p>
                     </div>
-                  </motion.div>
-                </AnimatePresence>
-              </motion.div>
-            </AnimatePresence>
-          );
-        })}
+                  </Link>
+                </motion.div>
+              </AnimatePresence>
+          ))}
+        </div>
       </div>
-    </div>
   );
 }
+
+

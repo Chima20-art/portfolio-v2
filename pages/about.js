@@ -6,16 +6,20 @@ const programming = [
         value: '95%',
     },
     {
-        title: 'Javascript',
-        value: '85%',
+        title: 'Javascript/ typescript',
+        value: '95%',
     },
     {
-        title: 'ReactJs',
-        value: '85%',
+        title: 'ReactJs/NextJs',
+        value: '95%',
     },
     {
-        title: 'Nextjs',
-        value: '85%',
+        title: 'NodeJS',
+        value: '90%',
+    },
+    {
+        title: 'Rxjs',
+        value: '80%',
     },
 ]
 
@@ -38,7 +42,7 @@ const education = [
     {
         place: 'Kharkiv National University of Radio Electronics',
         name: 'Masters in Cyber Security',
-        year: '2022 - present',
+        year: '2022 - 2024',
     },
     {
         place: ' Kharkiv National University of Radio Electronics',
@@ -53,21 +57,21 @@ const education = [
 ]
 const projects = [
     {
+        name: 'SuperbFragrance',
+        role: 'fragrances web store',
+        year: '01/2023-02/2024',
+        url: 'https://fragrances-six.vercel.app/',
+    },
+    {
         name: 'My Portfolio',
         role: 'this website',
         year: '2023- running',
         url: 'https://www.michich.com/',
     },
     {
-        name: 'The student Forum',
-        role: 'Bachelor Thesis ',
-        year: '05/2022-06/2022',
-        url: 'https://student-forum.vercel.app/',
-    },
-    {
         name: 'Auto-ecole Alwafa',
         role: 'Driving school website',
-        year: ' 12/2022-01/2023',
+        year: ' 12/2022-12/2022',
         url: 'https://dri-school.vercel.app/',
     },
 ]
@@ -87,21 +91,20 @@ export default function About() {
                         <div className="flex flex-col lg:flex-row gap-8  w-full justify-between  h-fit ">
                             <div className=" flex-1 text-lightGrey text-[13px] tracking-normal font-normal   leading-6 ">
                                 <p className="my-4">
-                                    Hello there! My name is{' '}
+                                    Hello there!  My name is {' '}
                                     <span className="font-bold">
                                         Chaimae Michich
                                     </span>{' '}
                                     and I am thrilled to introduce myself as a
-                                    passionate and dedicated JavaScript
-                                    developer.
+                                    passionate and dedicated Software
+                                    Developer, specializing
+                                    in building scalable, maintainable, and user-focused applications.
                                 </p>
                                 <p className="mt-4">
-                                    My enthusiasm for coding is matched only by
-                                    my commitment to excellence in all my
-                                    projects. I am confident in my ability to
-                                    work with both NextJS and ReactJS, and I am
-                                    eager to use my skills to bring your ideas
-                                    to life.
+
+
+                                    I manage projects, design efficient architectures, and integrate secure,
+                                    high-performing backends for end-to-end solutions.
                                 </p>
                             </div>
                             <div className=" flex-1  flex text-lightGrey flex-col  text-[13px] ">
@@ -122,7 +125,7 @@ export default function About() {
                                     </span>
                                     <span className=" flex   ml-6 h-full text-[13px]  ">
                                         {' '}
-                                        Ave Street,
+                                        Ave Street, Marrakech
                                     </span>
                                 </div>
                                 <div className="flex flex-row py-2">
@@ -132,8 +135,7 @@ export default function About() {
                                     </span>
                                     <span className=" flex   ml-6 h-full text-[13px] ">
                                         {' '}
-                                        Kharkiv national university of
-                                        radioelctronics
+                                        Kharkiv National University of Radioelectronics
                                     </span>
                                 </div>
                                 <div className="flex flex-row py-2">
