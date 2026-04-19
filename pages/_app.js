@@ -93,7 +93,7 @@ function MyApp({ Component, pageProps, router }) {
               width={550}
               src="/headShot.jpg"
               alt="main Img"
-              className=" w-fit xl:w-full  lg:my-auto object-contain h-full rounded drop-shadow-2xl "
+              className=" w-fit xl:w-full  lg:my-auto object-contain h-full rounded drop-shadow-2xl grayscale"
             />
           </div>
 
