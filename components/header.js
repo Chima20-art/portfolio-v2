@@ -14,6 +14,7 @@ export default function Header() {
         { title: 'About', url: '/about' },
         { title: 'Portfolio', url: '/portfolio' },
         { title: 'Services', url: '/services' },
+        { title: 'Blog', url: '/blog' },
         { title: 'Contact', url: '/contact' },
     ]
     const [hoveredItem, setHoveredItem] = useState('')
@@ -22,7 +23,11 @@ export default function Header() {
     const pathname = usePathname()
 
     useEffect(() => {
-        const currentPage = pages.find(page => page.url === pathname)
+        const exactMatch = pages.find((page) => page.url === pathname)
+        const prefixMatch = pages.find(
+            (page) => page.url !== '/' && pathname.startsWith(page.url + '/')
+        )
+        const currentPage = exactMatch || prefixMatch
         if (currentPage) {
             setSelectedItem(currentPage.title)
         }
@@ -160,7 +165,7 @@ export default function Header() {
                                     src="/headShot.jpg"
                                     width="150"
                                     height="150"
-                                    className="shadow-lg mx-auto"
+                                    className="shadow-lg mx-auto grayscale"
                                     alt="Profile"
                                 />
                                 {pages?.map((item) => (

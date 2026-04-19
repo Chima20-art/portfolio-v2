@@ -1,0 +1,346 @@
+export default function ReactNativeCover() {
+    return (
+        <div className="w-full h-full bg-grey flex items-center justify-center overflow-hidden">
+            <svg
+                viewBox="0 0 600 360"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Mobile phone connected to a server rack, illustrating full-stack React Native development."
+                className="w-full h-full"
+            >
+                <defs>
+                    <pattern
+                        id="rn-dots"
+                        x="0"
+                        y="0"
+                        width="20"
+                        height="20"
+                        patternUnits="userSpaceOnUse"
+                    >
+                        <circle cx="2" cy="2" r="1" fill="#555" opacity="0.4" />
+                    </pattern>
+                </defs>
+                <rect width="600" height="360" fill="url(#rn-dots)" />
+
+                <g>
+                    <rect
+                        x="85"
+                        y="40"
+                        width="160"
+                        height="280"
+                        rx="22"
+                        ry="22"
+                        fill="#1f1a2b"
+                        stroke="#ffffff"
+                        strokeWidth="2.5"
+                    />
+                    <rect
+                        x="145"
+                        y="56"
+                        width="40"
+                        height="3"
+                        rx="1.5"
+                        fill="#7d7789"
+                    />
+                    <rect
+                        x="95"
+                        y="72"
+                        width="140"
+                        height="220"
+                        rx="4"
+                        fill="#2a2438"
+                    />
+
+                    <rect
+                        x="105"
+                        y="82"
+                        width="20"
+                        height="4"
+                        rx="2"
+                        fill="#7d7789"
+                    />
+                    <rect
+                        x="215"
+                        y="82"
+                        width="12"
+                        height="4"
+                        rx="2"
+                        fill="#7d7789"
+                    />
+
+                    <rect
+                        x="105"
+                        y="95"
+                        width="120"
+                        height="50"
+                        rx="6"
+                        fill="#4f46e5"
+                        opacity="0.8"
+                    />
+                    <rect
+                        x="115"
+                        y="108"
+                        width="60"
+                        height="4"
+                        rx="2"
+                        fill="#ffffff"
+                        opacity="0.85"
+                    />
+                    <rect
+                        x="115"
+                        y="118"
+                        width="40"
+                        height="3"
+                        rx="1.5"
+                        fill="#ffffff"
+                        opacity="0.55"
+                    />
+                    <rect
+                        x="115"
+                        y="128"
+                        width="70"
+                        height="3"
+                        rx="1.5"
+                        fill="#ffffff"
+                        opacity="0.4"
+                    />
+
+                    <rect
+                        x="105"
+                        y="155"
+                        width="120"
+                        height="26"
+                        rx="4"
+                        fill="#3a3148"
+                    />
+                    <circle cx="118" cy="168" r="6" fill="#7dd3fc" />
+                    <rect
+                        x="130"
+                        y="163"
+                        width="70"
+                        height="3"
+                        rx="1.5"
+                        fill="#ffffff"
+                        opacity="0.75"
+                    />
+                    <rect
+                        x="130"
+                        y="170"
+                        width="50"
+                        height="3"
+                        rx="1.5"
+                        fill="#ffffff"
+                        opacity="0.4"
+                    />
+
+                    <rect
+                        x="105"
+                        y="188"
+                        width="120"
+                        height="26"
+                        rx="4"
+                        fill="#3a3148"
+                    />
+                    <circle cx="118" cy="201" r="6" fill="#a78bfa" />
+                    <rect
+                        x="130"
+                        y="196"
+                        width="70"
+                        height="3"
+                        rx="1.5"
+                        fill="#ffffff"
+                        opacity="0.75"
+                    />
+                    <rect
+                        x="130"
+                        y="203"
+                        width="50"
+                        height="3"
+                        rx="1.5"
+                        fill="#ffffff"
+                        opacity="0.4"
+                    />
+
+                    <rect
+                        x="105"
+                        y="221"
+                        width="120"
+                        height="26"
+                        rx="4"
+                        fill="#3a3148"
+                    />
+                    <circle cx="118" cy="234" r="6" fill="#4ade80" />
+                    <rect
+                        x="130"
+                        y="229"
+                        width="70"
+                        height="3"
+                        rx="1.5"
+                        fill="#ffffff"
+                        opacity="0.75"
+                    />
+                    <rect
+                        x="130"
+                        y="236"
+                        width="50"
+                        height="3"
+                        rx="1.5"
+                        fill="#ffffff"
+                        opacity="0.4"
+                    />
+
+                    <rect
+                        x="145"
+                        y="302"
+                        width="40"
+                        height="3"
+                        rx="1.5"
+                        fill="#7d7789"
+                    />
+                </g>
+
+                <g
+                    stroke="#7dd3fc"
+                    strokeWidth="2"
+                    fill="none"
+                    opacity="0.7"
+                    strokeLinecap="round"
+                >
+                    <path
+                        d="M 250 150 C 310 150, 340 140, 380 150"
+                        strokeDasharray="5 4"
+                    />
+                    <path
+                        d="M 250 210 C 310 210, 340 220, 380 210"
+                        strokeDasharray="5 4"
+                    />
+                </g>
+                <circle cx="315" cy="145" r="3" fill="#7dd3fc" />
+                <circle cx="325" cy="215" r="3" fill="#7dd3fc" />
+
+                <g>
+                    <rect
+                        x="380"
+                        y="95"
+                        width="160"
+                        height="170"
+                        rx="10"
+                        fill="#1f1a2b"
+                        stroke="#ffffff"
+                        strokeWidth="2.5"
+                    />
+
+                    <rect
+                        x="395"
+                        y="115"
+                        width="130"
+                        height="38"
+                        rx="4"
+                        fill="#2a2438"
+                        stroke="#7d7789"
+                        strokeWidth="1"
+                    />
+                    <circle cx="410" cy="134" r="4" fill="#4ade80" />
+                    <rect
+                        x="425"
+                        y="131"
+                        width="85"
+                        height="3"
+                        rx="1.5"
+                        fill="#7d7789"
+                    />
+                    <rect
+                        x="425"
+                        y="138"
+                        width="55"
+                        height="3"
+                        rx="1.5"
+                        fill="#7d7789"
+                        opacity="0.6"
+                    />
+
+                    <rect
+                        x="395"
+                        y="161"
+                        width="130"
+                        height="38"
+                        rx="4"
+                        fill="#2a2438"
+                        stroke="#7d7789"
+                        strokeWidth="1"
+                    />
+                    <circle cx="410" cy="180" r="4" fill="#4ade80" />
+                    <rect
+                        x="425"
+                        y="177"
+                        width="85"
+                        height="3"
+                        rx="1.5"
+                        fill="#7d7789"
+                    />
+                    <rect
+                        x="425"
+                        y="184"
+                        width="55"
+                        height="3"
+                        rx="1.5"
+                        fill="#7d7789"
+                        opacity="0.6"
+                    />
+
+                    <rect
+                        x="395"
+                        y="207"
+                        width="130"
+                        height="38"
+                        rx="4"
+                        fill="#2a2438"
+                        stroke="#7d7789"
+                        strokeWidth="1"
+                    />
+                    <circle cx="410" cy="226" r="4" fill="#facc15" />
+                    <rect
+                        x="425"
+                        y="223"
+                        width="85"
+                        height="3"
+                        rx="1.5"
+                        fill="#7d7789"
+                    />
+                    <rect
+                        x="425"
+                        y="230"
+                        width="55"
+                        height="3"
+                        rx="1.5"
+                        fill="#7d7789"
+                        opacity="0.6"
+                    />
+                </g>
+
+                <text
+                    x="165"
+                    y="340"
+                    textAnchor="middle"
+                    fill="#ffffff"
+                    fontSize="11"
+                    fontWeight="700"
+                    letterSpacing="2"
+                >
+                    MOBILE
+                </text>
+                <text
+                    x="460"
+                    y="285"
+                    textAnchor="middle"
+                    fill="#ffffff"
+                    fontSize="11"
+                    fontWeight="700"
+                    letterSpacing="2"
+                >
+                    BACKEND
+                </text>
+            </svg>
+        </div>
+    )
+}
